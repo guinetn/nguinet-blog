@@ -1,16 +1,15 @@
 # nguinet-blog
 
-Steps I've done to get my next.js blog. I choose nextJS for its SSG (Static Site Generation) feature as I though that speed essential for visitors of a blog. 
+Here are the steps I've done to create my [nextJS](https://nextjs.org/) blog. I choose nextJS for its SSG (Static Site Generation) feature as I though that speed essential for visitors of a blog. 
 
 ## Setup the next js app
 
->npx create-next-app nextjs-blog --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"  
-npm run dev    Starts the development server.  
-npm run build  Builds the app for production.  
-npm start	     Runs the built app in production mode.  
+>npx create-next-app nguinet-blog --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"  
+cd nguinet-blog  
+npm run dev    Starts the development server
 Open http://localhost:3000
 
-Create a repo on github
+### Create a github repository 
 
 >git init  
 git add .  
@@ -18,10 +17,29 @@ git commit -m "First Commit"
 git remote add origin https://github.com/guinetn/nguinet-blog.git  
 git push -u origin main  
 
-Pubish to vercel 
+### Pubish to vercel 
 
-I choose Vervel because as nextjs was created by vercel, it fit well with it, more than github pages.
+I choose Vercel because as they create nextjs, it fit well with it, more than github pages.
 
-- Create a new project on [Vercel](https://vercel.com/)
+- Login to [Vercel](https://vercel.com/)
+- Create a new project: authorize access to you're github repo
 - Deploy it
 - Open https://nguinet-blog.vercel.app/
+
+From now if you push a change to github, Vercel will build and update the site automatically (implicit ci-cd)
+
+### Transformation to a blog
+
+Follow instructions in https://nextjs.org/learn/basics/create-nextjs-app to get a nice nextJS blog including
+- SSG (static site generation): client side prerendering thanks to code splitting + <Link>
+- Dynamic routing posts/[id].js
+
+* Additional packages
+
+- [gray-matter](https://github.com/jonschlinkert/gray-matter): to read posts "Front Matter" header
+npm install gray-matter				
+- [Remark](https://github.com/remarkjs/remark-html): Markdown viewer 
+npm install remark remark-html 		
+- [fns](https://date-fns.org/): Formatiting dates
+npm install date-fns				
+
