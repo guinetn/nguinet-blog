@@ -11,4 +11,4 @@ return (
   );
 };
 
-export { ConfigContext, ConfigContextProvider };
+export { ConfigContext, ConfigContextProvider }
