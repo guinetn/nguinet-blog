@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ConfigContext, ConfigContextProvider } from '../components/ConfigContext';
+import { ConfigContext, ConfigContextProvider } from '../components/configContext';
 import config from '../config.json'
 import '../styles/global.css';
 
