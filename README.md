@@ -20,6 +20,7 @@ git push -u origin main
 ### Pubish to vercel 
 
 I choose Vercel because as they create nextjs, it fit well with it, more than github pages.
+Vercel is a deployment platform that allows you to host your site by connecting directly to your GitHub repository. 
 
 - Login to [Vercel](https://vercel.com/)
 - Create a new project: authorize access to you're github repo

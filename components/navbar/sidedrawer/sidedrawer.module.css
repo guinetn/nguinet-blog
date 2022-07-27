@@ -1,0 +1,51 @@
+.Backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.BackdropClose {
+	visibility: hidden;
+}
+
+.BackdropOpen {
+	visibility: visible;
+	text-align: center;
+}
+
+.Logo {
+	height: 45px;
+}
+
+.SideBarBody {
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	transition: 0.2s ease-out;
+	border: solid 1px black;
+}
+
+.SideBarBodyClose {
+	transform: translateY(-100%);
+	opacity: 0;
+}
+
+.SideBarBodyOpen {
+	transform: translateY(0%);
+	opacity: 100%;
+	font-size: xx-large;
+}
+
+.SideDrawerIcon {
+	width: 30%;
+	margin: 20px 0 5px 0;
+}
+
+/* media queries */
+@media (min-width: 768px) {
+	.Backdrop {
+		visibility: hidden;
+	}
+}

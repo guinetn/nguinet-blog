@@ -1,0 +1,48 @@
+.NavLinkHolder {
+	display: flex;
+	align-items: center;
+}
+
+/* media queries */
+@media (max-width: 768px) {
+	.NavLinkHolder {
+		flex-direction: column;
+	}
+	.NavLink {
+		margin: 12px 0;
+	}
+	.socialicon {
+		margin: 1em 0;
+	}
+}
+
+
+
+.link { 
+  display: block;
+  margin-left: 1rem;
+  text-decoration: none;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  color: lightgrey;
+}
+
+.link:hover {
+  text-decoration: none;
+}
+
+
+
+
+.social {
+  display: block;
+  margin-left: 1rem;
+}
+
+.socialicon {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: white;
+  transition: fill linear 150ms;
+}

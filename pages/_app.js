@@ -7,9 +7,6 @@ export default function App({ Component, pageProps }) {
 
   return ( 
     <ConfigContextProvider config={config}>
-      <div>
-          <hr/>
-          <Component {...pageProps} /> 
-      </div>
+      <Component {...pageProps} /> 
     </ConfigContextProvider>)
 }
