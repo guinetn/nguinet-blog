@@ -44,3 +44,28 @@ npm install remark remark-html
 - [fns](https://date-fns.org/): Formatiting dates
 npm install date-fns				
 
+## Add a Navbar 
+
+Replace the Header component with a NavBar + a Hamburger/SideDrawer when the viewport width is less than 768px
+
+## Add NProgress to signal interaction is running
+
+To show an animation when switching routes/pages, on any fetch.
+- [nprogress](https://ricostacruz.com/nprogress/)
+
+npm install nprogress
+
+```js
+// import router + progressbar
+import NProgress from "nprogress"
+import Router from "next/router";
+
+// events to start (show) / stop (hide) the progressbar
+const handleRouteStart = () => NProgress.start();
+const handleRouteDone = () => NProgress.done();
+
+// Just subscribe to the router events. That's the idea.
+Router.events.on("routeChangeStart", handleRouteStart);
+Router.events.on("routeChangeComplete", handleRouteDone);
+Router.events.on("routeChangeError", handleRouteDone);
+```

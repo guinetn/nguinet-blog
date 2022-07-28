@@ -11,7 +11,7 @@ export default function Layout({ children }) {
   return (
     <ConfigContext.Consumer>
      { config =>
-      <div className={styles.container}>
+      <div className={styles.layoutHcenter}>
        
 
         <Head>

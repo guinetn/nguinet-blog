@@ -1,7 +1,12 @@
 .mainpage {
-  margin: 2em;
+  margin: 3em;
 }
 
 .backToHome {
   margin: 3rem 0 0;
+}
+
+.layoutHcenter {
+  max-width: 90vw;
+  margin: 0 auto;
 }

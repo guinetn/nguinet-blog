@@ -1,0 +1,43 @@
+/* media queries */
+@media (max-width: 1000px) {
+	.profileSize {
+		display: none !important;
+	}
+	.hello {
+		text-align: center;
+	}
+}
+
+.aboutme{
+	display:flex;
+	justify-content: center;
+}
+
+.hello{
+	max-width: 700px;
+	font-size: 2em;	
+}
+
+.hello h1 {
+	margin: 0;
+}
+.hello div {
+}
+.hello span {
+	color: red;
+}
+
+.profileSize {
+	text-align: center;
+	min-width: 256px;
+    min-height: 256px;
+    margin-left: 1em;
+    position: relative;
+}
+
+.profile {
+    border-radius: 50%;
+    border: 10px solid #b33535;
+    outline: 15px solid #3c3d4442;
+}
+

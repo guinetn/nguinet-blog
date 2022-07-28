@@ -6,6 +6,8 @@ body {
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  background-color: #151616;
+  color: white;
 }
 
 * {
@@ -24,4 +26,74 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+.flexcenter {
+  display: flex;
+  justify-content: center;
+}
+
+/* Jump */
+.jump .word {
+  clip-path: inset(-100% 0 0 0);
+}
+.jump .char {
+  transition-timing-function: var(--ease-elastic-5);
+}
+
+.jump [data-scroll="out"] .char {
+  transform: translateY(100%);
+}
+
+/* ANIMATIONS */
+
+.bounce-in {
+  animation: bounce-in 2s ease;
+}
+.fade-in-down {
+  animation: fade-in-down 2s ease;
+}
+
+.roll-in {
+  animation: roll-in 1.2s ease;
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% { transform: scale(.9); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes roll-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) rotate(-120deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) rotate(0deg);
+  }
 }

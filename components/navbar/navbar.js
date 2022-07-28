@@ -11,7 +11,9 @@ function Navbar(props) {
 
     return ( 
         <div className={style.NavBar}>
-            <div className={style.NavContainer}>
+            <div className='flexcenter'>
+              
+              <div className={style.NavContainer}>
                 
                 <div>                
                    <Link href="/">
@@ -24,6 +26,7 @@ function Navbar(props) {
                 <div className={`${style.NavLinkHolder}`}>
                     <Navlinks />
                 </div>
+                
                 <button
                     className={`${style.Toggler}`}
                     onClick={() => setSidebarShown(!sidebarShown)}>
@@ -32,11 +35,13 @@ function Navbar(props) {
                     <div className={`${style.Bar3} ${sidebarShown ? style.CrossBar3 : null}`} />
                 </button>
                
+              </div>
             </div>
+            
             <SideDrawer
                 sidebarClose={() => setSidebarShown(false)}
-                sidebarShown={sidebarShown}
-            />
+                sidebarShown={sidebarShown}/>
+
         </div>
            
     )
