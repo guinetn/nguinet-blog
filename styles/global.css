@@ -1,14 +1,21 @@
-﻿html,
+﻿@font-face{ src: url("https://fonts.googleapis.com/css?family=Montserrat"); }
+@font-face{src: url("https://fonts.googleapis.com/css?family=Open+Sans"); }
+
+html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Open Sans', Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
   background-color: #151616;
   color: white;
 }
+
+h1,h2,h3 {
+  font-family: 'Montserrat', sans-serif
+}  
+
 
 * {
   box-sizing: border-box;
@@ -33,17 +40,37 @@ img {
   justify-content: center;
 }
 
-/* Jump */
-.jump .word {
-  clip-path: inset(-100% 0 0 0);
-}
-.jump .char {
-  transition-timing-function: var(--ease-elastic-5);
+.halign {
+  text-align: center;
 }
 
-.jump [data-scroll="out"] .char {
-  transform: translateY(100%);
+.relative {
+  position: relative;
 }
+
+
+/* BUTTONS  */
+
+.blue-button {
+  background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-size: 24px;
+  padding: 1rem 1.75rem;
+  margin: 0.5em 1em;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.blue-button:hover {
+  background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+}
+
+
 
 /* ANIMATIONS */
 
