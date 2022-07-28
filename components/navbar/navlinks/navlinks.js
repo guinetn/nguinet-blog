@@ -16,6 +16,10 @@ function Navlinks(props) {
 
             <Link href='/projects'> 
               <a className={style.link}>wall</a> 
+            </Link> 
+
+            <Link href='/me/about'> 
+              <a className={style.link}>about me</a> 
             </Link>
         
                 <Link href="https://twitter.com/me">

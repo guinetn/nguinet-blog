@@ -8,7 +8,7 @@ export default function Me() {
     	 { config =>
 			<section style={{marginTop:'10em'}}>
 
-				<div className={style.aboutme}>
+				<div className='flexcenter'>
 
 					<div className={`${style.hello} roll-in`}>	
 						<h1>Nicolas Guinet</h1>
@@ -31,6 +31,14 @@ export default function Me() {
 						src="/images/profile.jpg"
 						height={256} width={256} alt={config.name} />
 					</div>
+				</div>
+				
+				<div className='flexcenter'>
+
+					<h1>
+					Have a project in mind?<br/>
+					Let's exchange about it!
+					</h1>
 
 				</div>
 	         
