@@ -1,6 +1,7 @@
 import style from './me.module.css';
 import Image from 'next/image';
 import { ConfigContext } from '../../components/configContext';
+import Contact from '../../components/contact/contact';
 
 export default function Me() {
 	return (
@@ -33,12 +34,14 @@ export default function Me() {
 					</div>
 				</div>
 				
-				<div className='flexcenter'>
+				<div className='flexcentercolumn'>
 
 					<h1>
 					Have a project in mind?<br/>
 					Let's exchange about it!
 					</h1>
+
+					<Contact/>
 
 				</div>
 	         

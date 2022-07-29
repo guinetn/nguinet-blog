@@ -40,6 +40,13 @@ img {
   justify-content: center;
 }
 
+.flexcentercolumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .halign {
   text-align: center;
 }
