@@ -3,7 +3,6 @@ export function sendmail() {
     const $ = document.getElementById.bind(document);
     const bodyContent =  {
         "type": "Contact from nguinet.dev",
-        "subject": $("subject").value,
         "message": $("message").value,
         "contact_name": $("contact_name").value,
         "contact_email": $("contact_email").value,
@@ -28,11 +27,17 @@ export function sendmail() {
         return response.text();
     }).then(function(data) {
         console.log(data);
-
         $("send").style.display = "none";
         $("sent_confirmation").style.display = "block";
+        return 10;
+
     }).catch( function(e) {
-        console.log(`🔥 Fetch ${e} on ${api_url}`);
+        const errorMessage = `🔥🔥 Fetch ${e} 🔥🔥 on ${api_url}`;
+
+        $("send").style.display = "none";
+        $("sent_failed").innerHTML += `<br/><small>${errorMessage}</small>`;
+        $("sent_failed").style.display = "block";
+        console.log(errorMessage);
         return 0;
     })    
 

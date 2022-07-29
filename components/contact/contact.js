@@ -10,43 +10,37 @@ export default function Contact() {
 
   return (
     <>
-      <h1>Contact</h1>  
-
-       <section>
+      <section>
             
-            <fieldset>
-                <legend>Claim Subject</legend>
-                <select name="subject" id="subject">
-                    <option value="">--Please choose a subject--</option>
-                    <option value="Question">Question</option>
-                    <option value="Technology">Technology</option>
-                    <option value="Price">Price</option>
-                    <option value="Availability">Availability</option>
-                </select>
-            </fieldset>
+        <div className={style.form}>
 
-            <br/>
-            <fieldset>
-                <legend>Details about your claim</legend>
-                <textarea rows='5' cols='40' id="message" maxLength="200"></textarea> 
-            </fieldset>
+          <div className={`${style.inputContainer} relative ${style.ic2}`}>
+            <input id="contact_name" className={style.input} type="text" placeholder=" " />
+            <div className={style.cut}></div>
+            <label htmlFor="contact_name" className={style.placeholder}>Your name</label>
+          </div>
 
-            <br/>
-            <fieldset>
-                <legend>Contact</legend>
+          <div className={`${style.inputContainer} relative ${style.ic2}`}>
+            <input id="contact_email" className={style.input} type="text" placeholder=" " />
+            <div className={`${style.cut}`}></div>
+            <label htmlFor="contact_email" className={style.placeholder}>Email</label>
+          </div>
 
-                <div>
-                    <input type="text" id="contact_name" size="35" maxLength="80" placeholder="your name"/>
-                    <br/>
-                    <input type="email" id="contact_email" size="35" maxLength="80" placeholder="Your email" />
-                </div>
-            </fieldset>
+          <div className={`relative ${style.ic2}`}>
+            <textarea rows='5' cols='40' id="message" maxLength="200" className={style.textarea} placeholder=" "></textarea> 
+            <div className={`${style.cut}`}></div>
+            <label htmlFor="message" className={style.placeholder}>Message</label>
+          </div>
 
+        </div>
+
+          <div>
             <button id="send" type="button" className='blue-button' onClick={send_mail}>SEND</button>
             <div id="sent_confirmation" className={style.send_successful_message}>👍 MESSAGE SENT! THANK YOU.</div>
-
+            <div id="sent_failed" className={style.send_failed_message}>👎 ERROR: MESSAGE NOT SENT</div>
+          </div>
+           
         </section>
- 
     </>
   );
 }

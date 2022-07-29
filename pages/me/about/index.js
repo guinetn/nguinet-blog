@@ -18,7 +18,7 @@ export default function About() {
 						height={200} width={200} alt={config.name} />
 					</div>
 
-					<div class="content">
+					<div>
 						<h1>That's me!</h1> 
 						<p>
 							My name's Nicolas Guinet, I'm French, living at Saint-Germain-en-Laye, a city not too far from Paris. I'm a software engineer with a scientific masters degree.<br/> I've worked for a lot of great companies: Axa IM, Suez, Thales, Kepler Equities, Dexia, Rockwool and a many smaller entities. A lot of my work is Open Source software, and you can find it on this website and github.
