@@ -1,7 +1,13 @@
 import style from './me.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ConfigContext } from '../../components/configContext';
 import Contact from '../../components/contact/contact';
+import MyBackPack from './mybackpack/mybackpack';
+
+
+            
+
 
 export default function Me() {
 	return (
@@ -20,8 +26,12 @@ export default function Me() {
 						</div>
 						<div className='halign'>
 							<div>
-								<button className='blue-button'>My projects</button>
-								<button className='blue-button'>Get in touch</button>
+							<Link  href='/projects'> 
+									<a  className='blue-button'>My projects</a> 
+								</Link>
+								<Link  href='#getintouch'> 
+									<a  className='blue-button'>Get in touch</a> 
+								</Link>
 							</div>
 						</div>
 
@@ -34,12 +44,12 @@ export default function Me() {
 					</div>
 				</div>
 				
-				<div className='flexcentercolumn'>
-
-					<h1>
-					Have a project in mind?<br/>
+				<MyBackPack/>
+				
+						
+				<div id='getintouch'>
+					<h1> Have a project in mind?</h1>
 					Let's exchange about it!
-					</h1>
 
 					<Contact/>
 

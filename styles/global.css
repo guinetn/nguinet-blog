@@ -35,10 +35,19 @@ img {
   display: block;
 }
 
+
+/* LAYOUTS */
+
 .flexcenter {
   display: flex;
   justify-content: center;
 }
+
+.flexleft {
+  display: flex;
+  justify-content: left;
+}
+
 
 .flexcentercolumn {
   display: flex;
@@ -59,6 +68,7 @@ img {
 /* BUTTONS  */
 
 .blue-button {
+  display: inline-block;
   background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
   border-radius: .5rem;
   box-sizing: border-box;
@@ -75,6 +85,7 @@ img {
 
 .blue-button:hover {
   background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+  text-decoration: none; 
 }
 
 

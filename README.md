@@ -69,3 +69,8 @@ Router.events.on("routeChangeStart", handleRouteStart);
 Router.events.on("routeChangeComplete", handleRouteDone);
 Router.events.on("routeChangeError", handleRouteDone);
 ```
+## Add a contact form + nodemailer on firebase
+
+>cd functions  
+firebase deploy --only functions
+
