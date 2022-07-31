@@ -43,7 +43,7 @@ export default function Home({ allPostsData }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
 
         <div className='flexspacearound'>
-          <h2 className={utilStyles.headingLg}>MY BLOG</h2>
+          <h2 className={`${utilStyles.headingLg} colorGold`}>MY BLOG</h2>
           <input type="text" className={style.search} onChange={filteringPosts} placeholder={`search in ${allPostsData.length} posts`}/> 
         </div> 
         

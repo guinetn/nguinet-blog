@@ -1,7 +1,7 @@
 ﻿import style from './postitem.module.css';
 import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
-import DateIso from '../../components/date';
+import DateMonthAgo from '../../components/date';
 import Keyword from '../../components/keyword/keyword';
 
 export default function Postitem({ id, title, abstract, keywords, image, date }) {
@@ -19,7 +19,7 @@ export default function Postitem({ id, title, abstract, keywords, image, date })
         <Keyword keywords={keywords}/>
         
         <small className={`${style.postdate} ${utilStyles.lightText}`}>
-        🕑 <DateIso dateString={date} />
+        🕑 <DateMonthAgo dateString={date} />
         </small>
       </div>
       </Link>

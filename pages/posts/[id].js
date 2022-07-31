@@ -3,21 +3,41 @@ import { getAllPostIds, getPostData } from '../../lib/posts';
 import Date from '../../components/date';
 import Head from 'next/head';
 import utilStyles from '../../styles/utils.module.css';
+import style from '../../components/postitem/postitem.module.css';
+import DateMonthAgo from '../../components/date';
+import Keyword from '../../components/keyword/keyword';
 
 // Dynamic routes: /posts/<id> 	id: name of the markdown file 
 // 1. A React component to render this page
 export default function Post({ postData }) {
+  const { id, contentHtml, title, abstract, keywords, image, date} = {...postData};
+// export default function Post( { id, contentHtml, title, abstract, keywords, image, date}) {
   return (
       <Layout>
-       <Head>
-          <title>{postData.title}</title>
-        </Head>
-        <br />
-        {postData.id} 
-        <br />
-         <Date dateString={postData.date} /> 
-        <br />
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+            
+        <div className={`${style.postItem} margintop35`}
+          style={{backgroundImage: `url(../${image})`}}>
+              
+              <a className={`glink ${style.posttitle}`}>
+                <h3 >{title}</h3>
+              </a>
+
+            <Keyword keywords={keywords}/>
+            
+            <small className={`${style.postdate} ${utilStyles.lightText}`}>
+            🕑 <DateMonthAgo dateString={date} />
+            </small>
+        </div>
+
+        <div className='flexcentercolunn'>
+          <div>
+            <h3>Take away</h3>
+            <cite>{abstract}</cite>
+            <hr/>
+          </div>
+          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        </div>
+
       </Layout>
   );
 }
