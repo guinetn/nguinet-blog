@@ -2,7 +2,6 @@
 .postItem {
     border: solid 1px rgb(49, 49, 48);
     margin: 0.5em;
-    padding: 0 1em;
     box-shadow: 0 10px 30px -15px grey;
     display: flex;
     flex-direction: column;
@@ -38,9 +37,10 @@
     text-align: center;
     background-color: #0000002e;
     color: white;
-    border-radius: 6px;
+    border-radius: 20px 20px 0 0;
     padding: 0;
     margin: 0 auto;
+    width: 100%;
 }
 
 .postdate {
