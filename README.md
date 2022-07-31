@@ -81,3 +81,26 @@ firebase deploy --only functions
 - https://unsplash.com/license
 Beautiful, free images gifted by the world’s most generous community of photographers. Better than any royalty free or stock photos.
 https://help.unsplash.com/en/articles/2534409-crediting-photographers
+
+## Add syntax highlighter to posts
+
+- https://www.npmjs.com/package/remark-prism
+
+>yarn add remark-prism
+
+app.js
++ import "prismjs/themes/prism-tomorrow.css";
+
+post.js
++ import prism from 'remark-prism';
+...
+ const processedContent = await remark()
+  -.use(html)
+  +.use(html, { sanitize: false })
+  +.use(prism) 
+ .process(matterResult.content);
+
+ mypost.md
+ ```js
+ const user = { 'name':'joe', 'age': 25};
+  ```
