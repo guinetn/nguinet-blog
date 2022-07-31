@@ -28,7 +28,10 @@
 .tabsContainer label {
 	background: #f9f9f9;  
 	border-radius: .25em .25em 0 0;
-	color: #888;  /* Text color of the tab */
+    border-top: solid 1px #151616;
+    border-left: solid 1px #151616;
+    border-right: solid 1px #151616;
+    color: #888;  /* Text color of the tab */
 	cursor: pointer;
 	display: block;
 	font-size: 1em;  
@@ -37,22 +40,22 @@
 	margin-right: .25em;
 	padding: 0 1.5em;
 	text-align: center;
-
 	flex: 0 0 7em;
 }
 
 /* Hover tab action: change color */
 .tabsContainer input:hover + label {
 	background: #ddd; 
-	color: #666;  
+	color: black;  
+	
 }
 
 /* When tab is selected (= its input checked) */
 .tabsContainer input:checked + label {
-	background: #37AEE2 ; 
+    background: #37AEE2 ; 
 	color: #444; 
-	border: solid 2px black;
-    border-bottom: solid 1px #888;
+    border: solid 1px #37AEE2;
+    border-bottom: solid 2px #37AEE2;
     font-weight: bold;
 	/*
 	-webkit-transition: .1s;
@@ -75,7 +78,10 @@
 
 .tabsContainer input.tab1:checked ~ .content .tab1Content,		/* 🔥 MAGIC KEY 2: if checked... */
 .tabsContainer input.tab2:checked ~ .content .tab2Content,
-.tabsContainer input.tab3:checked ~ .content .tab3Content {
+.tabsContainer input.tab3:checked ~ .content .tab3Content, 
+.tabsContainer input.tab4:checked ~ .content .tab4Content, 
+.tabsContainer input.tab5:checked ~ .content .tab5Content 
+{
     opacity: 1;												/* 🔥 MAGIC KEY 3: ALL ITS content-x have opacity=1 */		
     z-index: 100;
 }

@@ -1,0 +1,20 @@
+/* SEARCH */
+
+.search {
+    background: #212222 url(/images/search.png) 12px 15px no-repeat;      
+    border: none;
+    border-radius: 35px;
+    padding: 7px 14px;                        
+    margin: 5px 2px;
+    width: 25vw;
+    color: #857f7f;
+    text-indent: 25px;
+    font-size: x-large;
+    height: 2em;
+}
+
+.postsContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

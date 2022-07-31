@@ -5,10 +5,6 @@ import { ConfigContext } from '../../components/configContext';
 import Contact from '../../components/contact/contact';
 import MyBackPack from './mybackpack/mybackpack';
 
-
-            
-
-
 export default function Me() {
 	return (
 		 <ConfigContext.Consumer>
@@ -45,15 +41,7 @@ export default function Me() {
 				</div>
 				
 				<MyBackPack/>
-				
-						
-				<div id='getintouch'>
-					<h1> Have a project in mind?</h1>
-					Let's exchange about it!
-
-					<Contact/>
-
-				</div>
+				<Contact/>
 	         
 	        </section>
           }

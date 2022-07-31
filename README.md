@@ -74,3 +74,10 @@ Router.events.on("routeChangeError", handleRouteDone);
 >cd functions  
 firebase deploy --only functions
 
+## Add 'my backpack' on the homepage
+
+## Add images for posts
+
+- https://unsplash.com/license
+Beautiful, free images gifted by the world’s most generous community of photographers. Better than any royalty free or stock photos.
+https://help.unsplash.com/en/articles/2534409-crediting-photographers

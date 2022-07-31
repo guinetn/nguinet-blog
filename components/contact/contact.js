@@ -10,8 +10,11 @@ export default function Contact() {
 
   return (
     <>
-      <section>
-            
+      <section className='margintop35'> 
+
+				<h2 id='getintouch'>📐 Have a project in mind?</h2>
+				Let's exchange about it!
+
         <div className={style.form}>
 
           <div className={`${style.inputContainer} relative ${style.ic2}`}>

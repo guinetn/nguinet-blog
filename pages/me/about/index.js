@@ -21,7 +21,10 @@ export default function About() {
 					<div>
 						<h1>That's me!</h1> 
 						<p>
-							My name's Nicolas Guinet, I'm French, living at Saint-Germain-en-Laye, a city not too far from Paris. I'm a software engineer with a scientific masters degree.<br/> I've worked for a lot of great companies: Axa IM, Suez, Thales, Kepler Equities, Dexia, Rockwool and a many smaller entities. A lot of my work is Open Source software, and you can find it on this website and github.
+							My name's Nicolas Guinet and I enjoy creating things for the web or to improve backend/desktop app's performance.
+							I'm a software engineer with a scientific masters degree.<br/> I’ve had the privilege of working for a lot of great companies: Axa IM, Suez, Thales, Kepler Equities, Dexia, Rockwool and a many smaller entities. 
+							I'm French, living at Saint-Germain-en-Laye, a city not too far from Paris. 
+							A lot of my work is Open Source software, and you can find it on this website and github.
 						</p>
 						
 						<h2>CV/Resumé</h2>
@@ -40,6 +43,12 @@ export default function About() {
 							<li>Tech trend: Languages (Rust, Carbon...), Web frameworks, IA (cnn...)</li>
 							<li>Mountain bike</li>
 						</ul>
+
+
+						<h2>Where I’ve Worked</h2>
+						<p>
+							to be completed
+				        </p>   
 					</div>
 
 				</div>

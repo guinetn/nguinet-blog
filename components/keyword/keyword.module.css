@@ -1,0 +1,12 @@
+.keyword {
+    background-color: #991968;
+    font-size: large;
+    color: white;
+    line-height: 1.1;
+    border: solid 1px black;
+    border-radius: 8px;
+    padding: 0.2em 0.5em;
+    margin: 0 0.2em;
+    text-align: center;
+    display: inline-block
+}
