@@ -104,3 +104,75 @@ post.js
  ```js
  const user = { 'name':'joe', 'age': 25};
   ```
+
+  ## Add MathJax: Latex, MAthML, AsciiMath
+  
+  - https://www.npmjs.com/package/better-react-mathjax
+  >npm i better-react-mathjax
+
+introduces two React components - MathJaxContext and MathJax
+
+```jsx
+import { MathJax, MathJaxContext } from "better-react-mathjax";
+
+const App = () => {
+
+   return (
+       <MathJaxContext>
+           <!-- APP CONTENT -->
+           ...
+            <h2>Basic MathJax example with Latex</h2>
+            <MathJax>{"\\(\\frac{10}{4x} \\approx 2^{12}\\)"}</MathJax>
+
+            <h2>Basic MathJax example with AsciiMath</h2>
+            <MathJax>{"`frac(10)(4x) approx 2^(12)`"}</MathJax>
+
+            <h2>Basic MathJax example with MathML</h2>
+            <MathJax>
+                <math>
+                    <mrow>
+                        <mrow>
+                            <mfrac>
+                                <mn>10</mn>
+                                <mi>4x</mi>
+                            </mfrac>
+                        </mrow>
+                        <mo>&asymp;</mo>
+                        <mrow>
+                            <msup>
+                                <mn>2</mn>
+                                <mn>12</mn>
+                            </msup>
+                        </mrow>
+                    </mrow>
+                </math>
+            </MathJax>
+           ...
+       </MathJaxContext>
+   )
+}
+
+
+const Component = () => {
+
+   return (
+       <div>
+           <MathJax>{ /* math content */ }</MathJax>
+           <h3>This is a header</h3>
+           <MathJax>
+               <div>
+                   <h4>This is a subheader</h4>
+                   <span>{ /* math content */ }</span>
+                   <h4>This is a second subheader</h4>
+                   <span>{ /* math content */ }</span>
+                   ...
+               </div>
+           </MathJax>
+           <p>
+               This is text which involves math <MathJax>{ /* math content */ }</MathJax> inside the paragraph.
+           </p>
+       </div>
+   )
+}
+
+```

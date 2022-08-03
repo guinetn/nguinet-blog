@@ -1,18 +1,25 @@
 ---
-title: 'Two Forms of Pre-rendering'
+title: 'Two Forms of Pre-rendering I'
 abstract: 'Two Forms of Pre-rendering lorem gpsdkgp^k ^skpg ksdgk sdkg sdjgj sdmjgdslj gsdmjgmsdgj smdg'
 date: '2020-01-01'
 keywords: 'react, js, devops'
 image: 'images/posts/alexander-ant-hheHwahRhA4-unsplash.jpg'
 ---
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+I Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
 
 - **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
 - **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
 
 Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
 
+## Some Math
+
+<p>Bayes Theorem</p>
+$$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$$
+
+<p> Shannon Entropy </p>
+<MathJax>  $$H(x) = - \sum_{i=1}^{n} p_i log_b(p_i)$$ </MathJax>
 
 # Useful JavaScript Code Snippets
 

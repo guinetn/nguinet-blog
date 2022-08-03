@@ -21,10 +21,11 @@ export default function About() {
 					<div>
 						<h1>That's me!</h1> 
 						<p>
-							My name's Nicolas Guinet and I enjoy creating things for the web or to improve backend/desktop app's performance.
-							I'm a software engineer with a scientific masters degree.<br/> I’ve had the privilege of working for a lot of great companies: Axa IM, Suez, Thales, Kepler Equities, Dexia, Rockwool and a many smaller entities. 
-							I'm French, living at Saint-Germain-en-Laye, a city not too far from Paris. 
-							A lot of my work is Open Source software, and you can find it on this website and github.
+My name's Nicolas Guinet, I'm a software engineer with more than 20 years of experience in a variety of domains. I enjoy creating things for the web or to improve backend/desktop app's performance. 
+<br/>During my career, I've written software in many languages, and I'm the most proficient in C#, C, NodeJS, Python and recently playing with Go and Rust. I though the mix wasm/wasmedge + rust + microservices is the next step in development so, as a constant learner, I stay focused on that ecosystem. I aslo take time to train me some IA (Tensorflow/Python/R) projects.
+<br/> I’ve had the privilege of working for a lot of great companies: Axa IM, Suez, Thales, Kepler Equities, Dexia, Rockwool and many smaller entities. 
+<br/><br/>I'm French, living at Saint-Germain-en-Laye, a city near from Paris. A lot of my own work is Open Source software, and you can find it on this website and github. I create this blog (with NextJS) as I enjoy sharing my learnings, be on this blog or Twitter.
+
 						</p>
 						
 						<h2>CV/Resumé</h2>

@@ -31,11 +31,11 @@ export default function Post({ postData }) {
 
         <div className='flexcentercolunn'>
           <div>
-            <h3>Take away</h3>
+            <h3 className={style.takeaway}>Take away</h3>
             <cite>{abstract}</cite>
             <hr/>
           </div>
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <div className={style.remarkHighlight} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </div>
 
       </Layout>

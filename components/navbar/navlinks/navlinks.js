@@ -14,7 +14,7 @@ function Navlinks(props) {
               <a className={style.link}>projects</a> 
             </Link>  
 
-            <Link href='/projects'> 
+            <Link href='/wall'> 
               <a className={style.link}>wall</a> 
             </Link> 
 

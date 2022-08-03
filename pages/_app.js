@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import Router from "next/router";
 import NProgress from "nprogress"
+import { MathJax, MathJaxContext } from "better-react-mathjax";
 import { ConfigContext, ConfigContextProvider } from '../components/configContext';
 import config from '../config.json'
 import "prismjs/themes/prism-tomorrow.css";
@@ -28,8 +29,10 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return ( 
-    <ConfigContextProvider config={config}>
-      <Component {...pageProps} /> 
-    </ConfigContextProvider>)
+    <MathJaxContext>
+      <ConfigContextProvider config={config}>
+        <Component {...pageProps} /> 
+      </ConfigContextProvider>
+    </MathJaxContext>)
 }
 

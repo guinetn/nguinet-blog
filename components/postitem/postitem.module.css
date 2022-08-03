@@ -60,3 +60,15 @@
 .postHeadImage {
     height: 30vh;
 }
+
+.takeaway {
+    color: darkred;
+}
+
+.remarkHighlight  pre[class*='language-'],
+.remarkHighlight  code[class*='language-'] {
+    font-size: 0.8em !important;
+    line-height: 1.0 !important;
+    width: 50vw !important;
+    overflow: auto !important;
+}
