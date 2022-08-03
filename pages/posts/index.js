@@ -4,6 +4,7 @@ import { getSortedPostsData } from '../../lib/posts';  // use FRONT MATTER lib t
 import Postitem from '../../components/postitem/postitem';
 import style from './index.module.css'
 
+
 /*
 pages/index.js is associated with the / route
 pages/posts/first-post.js is associated with the /posts/first-post route
@@ -51,6 +52,7 @@ export default function Home({ allPostsData }) {
           {allPostsData.map(({ id, title, abstract, keywords, image, date }) => (
             
             <Postitem key={id} {...{id, title, abstract, keywords, image, date}}/> 
+            
           ))}
         </div>
 

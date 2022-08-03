@@ -5,7 +5,7 @@ date: '2020-01-01'
 keywords: 'react, js, devops'
 image: 'images/posts/alexander-ant-hheHwahRhA4-unsplash.jpg'
 ---
-<MathJax>
+
 I Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
 
 - **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
@@ -13,7 +13,7 @@ I Next.js has two forms of pre-rendering: **Static Generation** and **Server-sid
 
 Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
 
-## Some Math
+## Some Maths
 
 \\(\\frac{10}{4x} \\approx 2^{12}\\)
 
@@ -143,4 +143,3 @@ console.log(Math.max(...combined));
 
 That's all
 
-</MathJax>
