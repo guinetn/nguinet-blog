@@ -4,7 +4,7 @@ import NProgress from "nprogress"
 import { MathJax, MathJaxContext } from "better-react-mathjax";
 import { ConfigContext, ConfigContextProvider } from '../components/configContext';
 import config from '../config.json'
-import "prismjs/themes/prism-tomorrow.css";
+import "prismjs/themes/prism-tomorrow.css"; // Code Editor
 
 // global styles are required to be added to `_app.js` per Next.js requirements.
 import '../styles/global.css';

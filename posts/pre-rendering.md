@@ -5,7 +5,7 @@ date: '2020-01-01'
 keywords: 'react, js, devops'
 image: 'images/posts/alexander-ant-hheHwahRhA4-unsplash.jpg'
 ---
-
+<MathJax>
 I Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
 
 - **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
@@ -15,11 +15,22 @@ Importantly, Next.js lets you **choose** which pre-rendering form to use for eac
 
 ## Some Math
 
+\\(\\frac{10}{4x} \\approx 2^{12}\\)
+
+$$\frac{10}{4x} \approx 2^{12}$$
+
+<p> Shannon Entropy</p>
+
+\\( H(x) = - \\sum_{i=1}^{n} p_i log_b(p_i) \\)
+
+$$H(x) = - \sum_{i=1}^{n} p_i log_b(p_i)$$ 
+
 <p>Bayes Theorem</p>
+
+\\( P(A|B) = \\frac{P(B|A)P(A)}{P(B)} \\)
+
 $$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$$
 
-<p> Shannon Entropy </p>
-<MathJax>  $$H(x) = - \sum_{i=1}^{n} p_i log_b(p_i)$$ </MathJax>
 
 # Useful JavaScript Code Snippets
 
@@ -131,3 +142,5 @@ console.log(Math.max(...combined));
 ```
 
 That's all
+
+</MathJax>

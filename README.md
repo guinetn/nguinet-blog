@@ -160,13 +160,24 @@ const Component = () => {
            <MathJax>{ /* math content */ }</MathJax>
            <h3>This is a header</h3>
            <MathJax>
-               <div>
-                   <h4>This is a subheader</h4>
-                   <span>{ /* math content */ }</span>
-                   <h4>This is a second subheader</h4>
-                   <span>{ /* math content */ }</span>
-                   ...
-               </div>
+            ## Math formulas with tested rendered
+
+            \\(\\frac{10}{4x} \\approx 2^{12}\\)
+
+            $$\frac{10}{4x} \approx 2^{12}$$
+
+            <p> Shannon Entropy</p>
+
+            \\( H(x) = - \\sum_{i=1}^{n} p_i log_b(p_i) \\)
+
+            $$H(x) = - \sum_{i=1}^{n} p_i log_b(p_i)$$ 
+
+            <p>Bayes Theorem</p>
+
+            \\( P(A|B) = \\frac{P(B|A)P(A)}{P(B)} \\)
+
+            $$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$$
+
            </MathJax>
            <p>
                This is text which involves math <MathJax>{ /* math content */ }</MathJax> inside the paragraph.
