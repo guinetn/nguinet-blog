@@ -1,5 +1,4 @@
 import style from '../me.module.css';
-import Image from 'next/image';
 import { ConfigContext } from '../../../components/configContext';
 import Layout from '../../../components/layout';
 

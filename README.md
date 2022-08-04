@@ -185,5 +185,38 @@ const Component = () => {
        </div>
    )
 }
+```
 
+## Add a modal
+
+Usage
+
+```jsx
+import { useState } from "react";
+import DialogModal from '../../../components/modal/modal';
+
+export default function MyPage() {
+
+		const [isOpened, setIsOpened] = useState(false);
+	  
+		const onProceed = () => {
+		  console.log("Proceed clicked");
+		};
+
+	return (
+	  	<Layout>
+
+            <div>
+                <button onClick={() => setIsOpened(true)}>Open "dialog" modal</button>
+
+                <DialogModal
+                    title="Dialog modal example"
+                    isOpened={isOpened}
+                    onProceed={onProceed}
+                    onClose={() => setIsOpened(false)}
+                >
+                    <p>To close: click Close, press Escape, or click outside.</p>
+                </DialogModal>
+            </div>
+            ...
 ```

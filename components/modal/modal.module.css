@@ -1,0 +1,11 @@
+
+.dialog {
+  width: 50vw;
+  border-radius: 8px;
+  border: 1px solid #888;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}

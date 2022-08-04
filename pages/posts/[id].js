@@ -15,28 +15,29 @@ export default function Post({ postData }) {
       <Layout>
         <MathJax>
                     
-        <div className={`${style.postItem} margintop35`}
-          style={{backgroundImage: `url(../${image})`}}>
+          <div className={`${style.postItem} margintop35`}
+            style={{backgroundImage: `url(../${image})`}}>
+                
+                <a className={`glink ${style.posttitle}`}>
+                  <h3 >{title}</h3>
+                </a>
+
+              <Keyword keywords={keywords}/>
               
-              <a className={`glink ${style.posttitle}`}>
-                <h3 >{title}</h3>
-              </a>
-
-            <Keyword keywords={keywords}/>
-            
-            <small className={`${style.postdate} ${utilStyles.lightText}`}>
-            🕑 <DateMonthAgo dateString={date} />
-            </small>
-        </div>
-
-        <div className='flexcentercolunn'>
-          <div>
-            <h3 className={style.takeaway}>Take away</h3>
-            <cite>{abstract}</cite>
-            <hr/>
+              <small className={`${style.postdate} ${utilStyles.lightText}`}>
+              🕑 <DateMonthAgo dateString={date} />
+              </small>
           </div>
-          <div className={style.remarkHighlight} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-        </div>
+
+          <div className='flexcentercolunn'>
+            <div>
+              <h3 className={style.takeaway}>Take away</h3>
+              <cite>{abstract}</cite>
+              <hr/>
+            </div>
+            <div className={style.remarkHighlight} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          </div>
+          
        </MathJax>
       </Layout>
   );
