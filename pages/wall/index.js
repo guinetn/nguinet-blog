@@ -1,7 +1,7 @@
 import Layout, { siteTitle } from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
-import { getSortedPostsData } from '../../lib/posts';  // use FRONT MATTER lib to extract post header
-import Postitem from '../../components/postitem/postitem';
+import { getSortedWalls } from '../../lib/wall';  // use FRONT MATTER lib to extract post header
+import WallItem from '../../components/wall/wallitem/wallitem';
 import style from './index.module.css'
 
 /*
@@ -13,17 +13,17 @@ pages/posts/first-post.js is associated with the /posts/first-post route
             - in development mode, runs on each request instead.
             - inside the function, you can fetch external data and send it as props to the page.*/
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allWallIndexes = await getSortedWalls();
   return {
     props: {
-      allPostsData,
+      allWallIndexes,
     },
   };
 }
 
-export default function Wall({ allPostsData }) {
+export default function Wall({ allWallIndexes }) {
 
-  function filteringPosts(event) {
+  function filteringWall(event) {
   
     const search_term = event.target.value.toUpperCase();
     const div_posts = document.querySelectorAll("#postsContainer > div");
@@ -42,17 +42,18 @@ export default function Wall({ allPostsData }) {
     <Layout>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
 
-        <div className='flexspacearound'>
+      <div className='flexspacearound'>
           <h2 className={`${utilStyles.headingLg} colorGold`}>THE WALL</h2>
-          <input type="text" className={style.search} onChange={filteringPosts} placeholder={`search in ${allPostsData.length} posts`}/> 
+          <input type="text" className={style.search} onChange={filteringWall} placeholder={`search in ${allWallIndexes.length} wall`}/> 
         </div> 
-        
-        <div id='postsContainer' className={style.postsContainer}>
-          {allPostsData.map(({ id, title, abstract, keywords, image, date }) => (
-            
-            <Postitem key={id} {...{id, title, abstract, keywords, image, date}}/> 
-          ))}
-        </div>
+
+      <div id='postsContainer' className={style.postsContainer}>
+        {allWallIndexes.map(({folder, title, subtitle, content, image}) => (
+          
+          <WallItem key={folder} {...{folder, title, subtitle, content, image }}/> 
+          
+        ))}
+      </div>
 
       </section>
     </Layout>

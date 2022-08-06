@@ -1,0 +1,46 @@
+
+.wallItem {
+    border: solid 1px rgb(49, 49, 48);
+    margin: 0.5em;
+    box-shadow: 0 10px 30px -15px grey;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    flex:0 0 40%;
+	height: 35vh;
+	position: relative;
+}
+
+@media (min-width: 1200px) {
+    .wallItem {
+        flex:0 0 30%;
+    }
+}
+
+@media (max-width: 800px) {
+    .wallItem {
+        flex:0 0 100%;
+    }
+}
+
+.linkhand {
+    cursor: pointer;
+}
+
+.walltitle {
+    font-size: large;
+    line-height: 1.1;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    background-color: #0000002e;
+    color: white;
+    border-radius: 20px 20px 0 0;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+}

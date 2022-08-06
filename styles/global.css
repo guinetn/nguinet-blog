@@ -12,6 +12,7 @@ body {
   font-size: 18px;
   background-color: #151616;
   color: white;
+    overflow: hidden;
 }
 
 html {

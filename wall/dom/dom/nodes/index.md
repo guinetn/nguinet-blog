@@ -1,0 +1,10 @@
+---
+title: 'nodes dom'
+image: 'images/posts/greg-rakozy-0LU4vO5iFpM-unsplash.jpg'
+---
+
+NODEs DOM
+<button class="copyable button-30" role="button">cursor: msgkkgso</button>
+<button class="copyable button-30" role="button">cursor: msgkkqsfsq</button>
+<p>cursor: pointer</p>
+<button class="copyable button-30" role="button">cursor: msgkkqsfsq</button>

@@ -220,3 +220,8 @@ export default function MyPage() {
             </div>
             ...
 ```
+
+
+## Add swiperjs.com
+
+https://swiperjs.com/swiper-api#prop-swiper-allowSlidePrev

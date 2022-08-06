@@ -31,9 +31,7 @@ export default function MyPage() {
                     <p>To close: click Close, press Escape, or click outside.</p>
 
                 </DialogModal>
-            </div>
-
-            
+            </div>   
 */
 
 const DialogModal = ({ title, isOpened, onProceed, onClose, children, } ) => {
