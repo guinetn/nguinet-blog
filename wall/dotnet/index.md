@@ -1,6 +1,6 @@
 ---
-title: 'dotnet'
-subtitle: 'DOTNET-1'
+tiletitle: 'dotnet'
+tilesubtitle: 'DOM-html subtitle'
 image: 'images/posts/solen-feyissa-tSfSZb-eocE-unsplash.jpg'
 ---
 <p>A respdotnet résumé site<br />

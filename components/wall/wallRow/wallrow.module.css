@@ -33,17 +33,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1em;
+  padding: 1em 1.5em 1em 1em;
   width: 16vw;
   max-width: 16vw;
   position: sticky;
-  left: -13vw;
+  left: -216px;
 }
 
 .intro h2 {
     cursor: pointer;
     position: relative;
-    right: -48.5%;
+    right: -54.5%;
     transform: rotate(270deg);
     text-align: center;
     color: #ffeb00;
@@ -105,7 +105,7 @@
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
   box-sizing: border-box;
   color: #36395A;
-
+  margin-right:1em;  
   display: inline-flex;
   height: 30px;
   justify-content: center;

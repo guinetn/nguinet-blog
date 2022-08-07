@@ -1,7 +1,7 @@
-import Layout, { siteTitle } from '../../components/layout';
+import Layout from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
-import { getSortedWalls } from '../../lib/wall';  // use FRONT MATTER lib to extract post header
-import WallItem from '../../components/wall/wallitem/wallitem';
+import { getTiles } from '../../lib/wall'; 
+import WallTile from '../../components/wall/wallTile/wallTile';
 import style from './index.module.css'
 
 /*
@@ -13,17 +13,18 @@ pages/posts/first-post.js is associated with the /posts/first-post route
             - in development mode, runs on each request instead.
             - inside the function, you can fetch external data and send it as props to the page.*/
 export async function getStaticProps() {
-  const allWallIndexes = await getSortedWalls();
+  const allWallTiles = await getTiles();
+
   return {
     props: {
-      allWallIndexes,
-    },
+      allWallTiles,
+    }
   };
 }
 
-export default function Wall({ allWallIndexes }) {
+export default function Wall({ allWallTiles }) {
 
-  function filteringWall(event) {
+  function filterWall(event) {
   
     const search_term = event.target.value.toUpperCase();
     const div_posts = document.querySelectorAll("#postsContainer > div");
@@ -43,14 +44,14 @@ export default function Wall({ allWallIndexes }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
 
       <div className='flexspacearound'>
-          <h2 className={`${utilStyles.headingLg} colorGold`}>THE WALL</h2>
-          <input type="text" className={style.search} onChange={filteringWall} placeholder={`search in ${allWallIndexes.length} wall`}/> 
-        </div> 
+        <h2 className={`${utilStyles.headingLg} colorGold`}>THE WALL</h2>
+        <input type="text" className={style.search} onChange={filterWall} placeholder={`search in ${allWallTiles.length} tiles`}/> 
+      </div> 
 
       <div id='postsContainer' className={style.postsContainer}>
-        {allWallIndexes.map(({folder, title, subtitle, content, image}) => (
+        {allWallTiles.map(({id, tiletitle, tilesubtitle, content, image}) => (
           
-          <WallItem key={folder} {...{folder, title, subtitle, content, image }}/> 
+          <WallTile key={id} {...{id, tiletitle, tilesubtitle, content, image }}/> 
           
         ))}
       </div>

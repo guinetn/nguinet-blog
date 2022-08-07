@@ -1,6 +1,6 @@
 ---
-title: 'JAVASCRIPT'
-subtitle: 'JS-1'
+tiletitle: 'JAVASCRIPT'
+tilesubtitle: 'DOM-html subtitle'
 image: 'images/posts/solen-feyissa-tSfSZb-eocE-unsplash.jpg'
 ---
 <p>A javascript résumé site<br />

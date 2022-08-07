@@ -1,6 +1,6 @@
 ---
-title: 'DOM HTML'
-subtitle: 'DOM-1'
+tiletitle: 'DOM HTML'
+tilesubtitle: 'DOM-html subtitle'
 image: 'images/posts/solen-feyissa-tSfSZb-eocE-unsplash.jpg'
 ---
 <p>A dom resumé<br />

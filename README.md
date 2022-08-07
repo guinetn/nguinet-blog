@@ -224,4 +224,6 @@ export default function MyPage() {
 
 ## Add swiperjs.com
 
+npm i swiper
+https://swiperjs.com/react
 https://swiperjs.com/swiper-api#prop-swiper-allowSlidePrev

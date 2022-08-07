@@ -1,5 +1,5 @@
 
-.wallItem {
+.tile {
     border: solid 1px rgb(49, 49, 48);
     margin: 0.5em;
     box-shadow: 0 10px 30px -15px grey;
@@ -16,13 +16,13 @@
 }
 
 @media (min-width: 1200px) {
-    .wallItem {
+    .tile {
         flex:0 0 30%;
     }
 }
 
 @media (max-width: 800px) {
-    .wallItem {
+    .tile {
         flex:0 0 100%;
     }
 }

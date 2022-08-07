@@ -1,6 +1,6 @@
 ---
 title: 'cargo'
-sidetitle: 'cargo-1'
+sidetitle: 'cargo-1 ↓'
 image: 'images/posts/alexander-ant-hheHwahRhA4-unsplash.jpg'
 ---
 <p>A rust résumé site<br />
