@@ -4,7 +4,6 @@ import { getSortedPostsData } from '../../lib/posts';  // use FRONT MATTER lib t
 import Postitem from '../../components/postitem/postitem';
 import style from './index.module.css'
 
-
 /*
 pages/index.js is associated with the / route
 pages/posts/first-post.js is associated with the /posts/first-post route

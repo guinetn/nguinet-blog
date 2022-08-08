@@ -2,6 +2,7 @@
 import style from './walltile.module.css';
 
 export default function WallTile({id, tiletitle, tilesubtitle, content, image }) { 
+
   return (
     <>
       <Link href={`/wall/${id}`}>
@@ -9,9 +10,10 @@ export default function WallTile({id, tiletitle, tilesubtitle, content, image })
              style={{backgroundImage: `url(${image})`}} >
          
           <a className={`glink ${style.walltitle}`}>
-            <h3 >{tiletitle}</h3>
-            <h3 >{tilesubtitle}</h3>
-            <h3 >{content}</h3>
+            <h3 className='capitalize colorGold' >{tiletitle}</h3>
+            <h4>{tilesubtitle}</h4>
+ 
+            <div dangerouslySetInnerHTML={{ __html: content }} className='colorGold' />
           </a>
         </div>
       </Link>

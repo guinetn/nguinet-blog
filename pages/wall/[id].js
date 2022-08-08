@@ -9,9 +9,9 @@ import SwipeModal from '../../components/modal/swipemodal/swipemodal';
 // Dynamic routes: /posts/<id> 	id: name of the markdown file 
 // 1. A React component to render this page
 export default function Wall({ wallData }) {
-  console.log('------------------------------------------------');
-  console.log({wallData});
-  const { folder, tiletitle, tilesubtitle, wallRows} = {...wallData};
+  // console.log('------------------------------------------------');
+  // console.log({wallData});
+  const { folder, head, body, wallRows} = {...wallData};
   /*
   wallData:
     contentHtml: "<p>A rust résumé site<br />\r\ntemplate by HTML5 UP</p>\n"
@@ -34,15 +34,15 @@ export default function Wall({ wallData }) {
       1: ...
   */
 
-  const [data, setData] = useState( {
-    title:'demo',
+  const [slides, setSlides] = useState( {
+    title:'',
     slides: ''
   });
   const [isOpened, setIsOpened] = useState(false);
 
   function onClick(event) {
   
-    event.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
+    //event.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
 		//console.log('click ' + event.target.nodeName);
 		//console.log('click ' + event.target.classList);
 
@@ -64,9 +64,9 @@ export default function Wall({ wallData }) {
         if (closestArticle===null)
         return;
         const title = closestArticle.querySelector("h2").innerText;
-        const children = closestArticle.querySelector("data").innerHTML;
+        const children = closestArticle.querySelector("data").innerHTML.split('<div>slide-separator</div>');
         setIsOpened(true);
-        setData( {title: title, slides:children });
+        setSlides( {title: title, slides:children });
 			}
   }
 
@@ -74,10 +74,10 @@ export default function Wall({ wallData }) {
       <Layout>
           <div className='wall overflowhidden' onClick={(e)=>onClick(e)}>
                 
-            <h1>{tiletitle} (folder {folder})<sub><small>{tilesubtitle}</small></sub></h1>
+            <h1>{head.tiletitle} <sub> <small> {head.tilesubtitle}</small></sub></h1>
 
             <SwipeModal
-                data={data}
+                slides={slides}
                 isOpened={isOpened}
                 onClose={() => setIsOpened(false)}>
 
@@ -86,8 +86,8 @@ export default function Wall({ wallData }) {
             
             </SwipeModal>
 
-            {wallRows.map(({folder, title, sidetitle, content, image, tiles}) => (
-              <WallRow key={folder} {...{title, sidetitle, content, image, tiles }}/>  
+            {wallRows.map(({folder, head, body, tiles}) => (
+              <WallRow key={folder} {...{folder, head, body, tiles }}/>  
             ))}
                
           </div>

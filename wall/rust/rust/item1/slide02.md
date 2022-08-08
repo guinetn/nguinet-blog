@@ -1,15 +1,5 @@
-# C# keywords
+## Slide 2
 
-## KEYWORDS
-
- <h2>Different.</h2>
-                <a href="images/fulls/03.jpg"></a>
-
-## VALUES
-
-fezgzr
-g
-df
-g
-dfg
-df
+<div class="swiper-zoom-container">
+<img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+</div>

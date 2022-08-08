@@ -142,6 +142,20 @@ img {
   color: gold;
 }
 
+
+/* TEXT */
+
+.underline { 
+  text-decoration: underline;
+  text-decoration-style: double;
+}
+
+.capitalize { 
+  text-transform: uppercase;
+}
+
+
+
 /* ANIMATIONS */
 
 .bounce-in {

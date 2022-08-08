@@ -2,9 +2,8 @@
 // import utilStyles from '../../styles/utils.module.css';
 // import DateMonthAgo from '../../components/date';
 // import Keyword from '../../components/keyword/keyword';
-import { SwiperSlide } from 'swiper/react';
 
-export default function WallRow({folder, title, sidetitle, content, image, tiles }) { 
+export default function WallRow({folder, head, body, tiles }) { 
 
 /*
     wallRows: Array(2)
@@ -27,10 +26,11 @@ export default function WallRow({folder, title, sidetitle, content, image, tiles
 */
 
   function onWheel(event) {
-      console.log("wheel:" + event.target);
+      // console.log("wheel:" + event.target);
 
-      if (event.target==undefined)
+      if (event.target==undefined) {
         return;
+      }
       const closestContainer = event.target.closest("section");
       if (closestContainer==null || ! closestContainer.classList.contains(`${style.container}`)) {
         return;
@@ -44,7 +44,7 @@ export default function WallRow({folder, title, sidetitle, content, image, tiles
       x = Math.min(0,x);
       x = Math.max( -2*document.defaultView.window.visualViewport.width-15, x); //-15 to see the right border
       closestContainer.style.left = x + 'px';
-    };
+ };
 
   return (
     <>
@@ -53,25 +53,27 @@ export default function WallRow({folder, title, sidetitle, content, image, tiles
 
           <section id='container1' className={style.container}>
 	    	      
-            <div key={title} className={`${style.item} ${style.intro}`}>
-              <h1>{title}</h1> 
-              <h2 className='sidetitle'>{sidetitle}</h2>
-              {content}
+            <div key={head.title} className={`${style.item} ${style.intro}`}>
+              <h1>{head.title}</h1> 
+              <h2 className='sidetitle'>{head.sidetitle}</h2>
+              <div dangerouslySetInnerHTML={{ __html: body }} />
             </div>
 
-            {tiles.map(({ title, content, image, slides}, i) => (
+            {tiles.map(({ head, body, slides}, i) => (
               <article key={`tile-${i}`} className={`${style.item} ${style.back01} ${style.articleCell}`}>
                   <div className={`${style.articleContent}`}>
-                    {content.substring(0,10)}
+                    <div dangerouslySetInnerHTML={{ __html: body }}/>
                   </div>
-                  <h2>{title}</h2>
+                  <h2>{head.title}</h2>
                   <a href="images/fulls/01.jpg"></a>
                  
                   <data key={`slide-${i}`} className={style.slides}>
                   {slides.map((s,j)=> 
-                      <SwiperSlide key={`SwipeSlide-${j}`}>
-                        {s.slidecontent}
-                      </SwiperSlide>
+               
+                    <div key={`sl-a${j}`}>
+                      <div dangerouslySetInnerHTML={{ __html: s.slidecontent }} />
+                      <div>slide-separator</div>
+                    </div>
                   )}
                   </data>
 

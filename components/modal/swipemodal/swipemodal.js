@@ -1,17 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import * as style from './swipemodal.module.css'
 import { Navigation, Pagination, Keyboard, Zoom, Scrollbar } from 'swiper';
-import { Swiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-const SwipeModal = ({ data, isOpened, onClose } ) => {
- 
+const SwipeModal = ({ slides, isOpened, onClose } ) => {
+
   const ref = useRef(null);
   
-  console.log("data swipper");
-  console.dir(data);
-
   useEffect(() => {
     if (isOpened) {
       ref.current?.showModal();
@@ -28,17 +25,21 @@ const SwipeModal = ({ data, isOpened, onClose } ) => {
     <dialog className={style.dialog} ref={ref} onCancel={onClose} onClick={onClose}>
      
       <div onClick={preventAutoClose}>
-        <h3>{data.title}</h3>
+        <h3>{slides.title}</h3>
 
-        <Swiper
-          modules={[Keyboard, Navigation, Pagination, Scrollbar, Zoom]}
+        <Swiper 
           spaceBetween={50}
           slidesPerView={3}
           zoom = {true}
           keyboard = {{ enabled: true }}
+          modules={[Keyboard, Navigation, Pagination, Scrollbar, Zoom]}
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}>
-            {data.slides}
+            {Object.values(slides.slides).map((slideContent, index) => (
+              <SwiperSlide key={slideContent}>
+                <div dangerouslySetInnerHTML={{ __html: slideContent }} />
+              </SwiperSlide>
+            ))}
         </Swiper>
 
       </div>

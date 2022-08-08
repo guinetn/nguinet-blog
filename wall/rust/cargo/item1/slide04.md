@@ -1,4 +1,6 @@
-# C# image
+# SLIDE 04 
+
+C# image
 
 <a href="images/fulls/03.jpg" class="image"></a>
  <h2>The Pursuit</h2>

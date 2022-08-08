@@ -61,6 +61,7 @@ article.aa {
 .article-content {
 	padding: 1em;
   flex: 1 1 auto;
+  overflow: hidden;
 }
 
 article.aa h2 {
