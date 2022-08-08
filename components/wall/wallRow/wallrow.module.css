@@ -93,6 +93,9 @@
 		background: linear-gradient(183deg, #893c01 0%, #e6e9ed 100%);
 	}
 
+  data.slides {
+    display: none;
+  }
 
 
 .buttonCopy {

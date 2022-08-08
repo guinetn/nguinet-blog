@@ -11,27 +11,32 @@ import SwipeModal from '../../components/modal/swipemodal/swipemodal';
 export default function Wall({ wallData }) {
   console.log('------------------------------------------------');
   console.log({wallData});
-  const { folder, title, subtitle, wallRows} = {...wallData};
+  const { folder, tiletitle, tilesubtitle, wallRows} = {...wallData};
   /*
   wallData:
     contentHtml: "<p>A rust résumé site<br />\r\ntemplate by HTML5 UP</p>\n"
     folder: "rust"
     image: "images/posts/solen-feyissa-tSfSZb-eocE-unsplash.jpg"
-    rowsubtitle: "RUST subtitle"
-    rowtitle: "RUST LANG"
-    wallRows: Array(3) 
+    tilesubtitle: "RUST subtitle"
+    tiletitle: "RUST LANG"
+    wallRows: Array(2)
       0:
-        content: "<p>A rust borrowingsite<br />\r\ntemplate by HTML5 UP</p>"
-        folder: "rust/borrowing"
-        image: "images/posts/solen-feyissa-tSfSZb-eocE-unsplash.jpg"
-        sidetitle: "borrowing ↓"
-        title: "borrowing"
+        content: "<p>A rust résumé site<br />\r\ntemplate by HTML5 UP</p>"
+        folder: "rust/cargo"
+        image: "images/posts/alexander-ant-hheHwahRhA4-unsplash.jpg"
+        sidetitle: "cargo-1 ↓"
+        tiles: Array(4)
+          0:
+            content: "\r\n<button class=\"copyable button-30\" role=\"button\">cursor: msgkkgso</button>\r\n<button class=\"copyable button-30\" role=\"button\">cursor: msgkkqsfsq</button>\r\n<p>cursor: pointer</p>\r\n<button class=\"copyable button-30\" role=\"button\">cursor: msgkkqsfsq</button>\r\n"
+            image: "images/posts/greg-rakozy-0LU4vO5iFpM-unsplash.jpg"
+            slides: (4) [{…}, {…}, {…}, {…}]
+            title: "Linq"
       1: ...
   */
 
   const [data, setData] = useState( {
     title:'demo',
-    folder: ''
+    slides: ''
   });
   const [isOpened, setIsOpened] = useState(false);
 
@@ -55,8 +60,11 @@ export default function Wall({ wallData }) {
 		      console.error(`Failed to copy ${stringToCopy}`, err);
 				}
 			} else if (event.target.classList.toString().indexOf('articleContent')>=0 || event.target.classList.toString().indexOf('item')>=0) {
+        const closestArticle = event.target.closest("article");
+        const title = closestArticle.querySelector("h2").innerText;
+        const children = closestArticle.querySelector("data").innerHTML;
         setIsOpened(true);
-        setData( {title: event.target.innerHTML, folder: event.target.baseURI});
+        setData( {title: title, slides:children });
 			}
   }
 
@@ -64,7 +72,7 @@ export default function Wall({ wallData }) {
       <Layout>
           <div className='wall' onClick={(e)=>onClick(e)}>
                 
-            <h1>{title} (folder {folder})<sub><small>{subtitle}</small></sub></h1>
+            <h1>{tiletitle} (folder {folder})<sub><small>{tilesubtitle}</small></sub></h1>
 
             <SwipeModal
                 data={data}
@@ -76,8 +84,8 @@ export default function Wall({ wallData }) {
             
             </SwipeModal>
 
-            {wallRows.map(({folder, title, sidetitle, content, image}) => (
-              <WallRow key={folder} {...{title, sidetitle, content, image }}/>  
+            {wallRows.map(({folder, title, sidetitle, content, image, tiles}) => (
+              <WallRow key={folder} {...{title, sidetitle, content, image, tiles }}/>  
             ))}
                
           </div>

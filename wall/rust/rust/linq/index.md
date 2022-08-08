@@ -1,5 +1,5 @@
 ---
-title: 'Linq'
+title: 'Linq 2'
 image: 'images/posts/greg-rakozy-0LU4vO5iFpM-unsplash.jpg'
 ---
 

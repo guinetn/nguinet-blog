@@ -1,5 +1,5 @@
 ---
-title: 'C# types'
+title: 'C# types 2'
 image: 'images/posts/solen-feyissa-tSfSZb-eocE-unsplash.jpg'
 ---
 

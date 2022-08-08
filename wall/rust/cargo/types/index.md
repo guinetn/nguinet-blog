@@ -1,5 +1,5 @@
 ---
-title: 'C# types'
+title: 'rust types'
 image: 'images/posts/solen-feyissa-tSfSZb-eocE-unsplash.jpg'
 ---
 

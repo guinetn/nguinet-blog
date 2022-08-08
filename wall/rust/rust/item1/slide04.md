@@ -1,3 +1,4 @@
-# C# image
+# slide 4
 
-<a href="images/fulls/03.jpg" class="image"></a>
+<div className="swiper-zoom-container">
+<img src="https://swiperjs.com/demos/images/nature-7.jpg" />
