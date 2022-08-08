@@ -41,6 +41,9 @@ img {
   display: block;
 }
 
+.overflowhidden {
+  overflow: hidden;
+}
 
 /* LAYOUTS */
 

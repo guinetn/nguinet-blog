@@ -61,6 +61,8 @@ export default function Wall({ wallData }) {
 				}
 			} else if (event.target.classList.toString().indexOf('articleContent')>=0 || event.target.classList.toString().indexOf('item')>=0) {
         const closestArticle = event.target.closest("article");
+        if (closestArticle===null)
+        return;
         const title = closestArticle.querySelector("h2").innerText;
         const children = closestArticle.querySelector("data").innerHTML;
         setIsOpened(true);
@@ -70,7 +72,7 @@ export default function Wall({ wallData }) {
 
   return (
       <Layout>
-          <div className='wall' onClick={(e)=>onClick(e)}>
+          <div className='wall overflowhidden' onClick={(e)=>onClick(e)}>
                 
             <h1>{tiletitle} (folder {folder})<sub><small>{tilesubtitle}</small></sub></h1>
 
