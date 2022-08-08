@@ -27,6 +27,7 @@ export default function WallRow({folder, title, sidetitle, content, image, tiles
 */
 
   function onWheel(event) {
+      console.log("wheel:" + event.target);
 
       if (event.target==undefined)
         return;
