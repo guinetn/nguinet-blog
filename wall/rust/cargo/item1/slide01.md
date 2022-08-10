@@ -1,9 +1,11 @@
-# C# types
+# SLIDE 01
+
+C# types
 
 ## REFERENCES
 
- <h2>Ad Infinitum</h2>
-                <a href="images/fulls/02.jpg"></a>
+<h2>Ad Infinitum</h2>
+<a href="images/fulls/02.jpg"></a>
 
 ## VALUES
 

@@ -1,34 +1,26 @@
 .profileSizeContainer {
 	display: flex;
 	justify-content: center;
-	flex-direction: row-reverse;
 }
 
-.hello{
-	max-width: 700px;
-	font-size: 2em;	
+
+.profileSize {
+	text-align: center;
+	min-width: 256px;
+    min-height: 256px;
+    margin-left: 1em;
+    position: relative;
 }
 
-.hello h1 {
-	margin: 0;
+.profile {
+    border-radius: 50%;
+    border: 10px solid #b33535;
+    outline: 15px solid #3c3d4442;
 }
-.hello div {
-	margin: 0;
-}
-.hello span {
-	color: red;
-}
-.role {
-	font-size: large;
-    top: -26px;
-    left: 40px;
-    color: lightgrey;
-    position: absolute;
-}
+
 
 /* media queries */
 @media (max-width: 1000px) {
-	
 	.profileSizeContainer{
 		display: flex;
 		flex-direction: column;

@@ -52,6 +52,7 @@ img {
   justify-content: center;
 }
 
+
 .flexcentercolunn {
   display: flex;
   flex-direction: column;
@@ -69,6 +70,14 @@ img {
   display: flex;
   justify-content: left;
 }
+
+
+.flexleftcolunn {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
 
 .flexspacearound {
   display: flex;
@@ -97,6 +106,12 @@ img {
   margin-top:3.5em !important;
 }
 
+/* WIDTHS */
+
+.vw10 {
+  width: 10vw;
+}
+
 /* LINKS */
 
 .glink { 
@@ -110,6 +125,68 @@ img {
 
 .glink:hover {
   text-decoration: none;
+}
+
+/* HR */
+
+.hr-fade {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  color: #595b5c;
+  background-image: linear-gradient(90deg,transparent,#595B5C 50%,transparent 100%);
+}
+
+
+/* PROFILE */
+
+.profileSizeContainer {
+  display: flex;
+  justify-content: left;
+}
+
+.profileSize {
+	text-align: center;
+	min-width: 256px;
+    min-height: 256px;
+    margin-left: 1em;
+    position: relative;
+}
+
+.profile {
+    border-radius: 50%;
+    border: 10px solid #b33535;
+    outline: 15px solid #3c3d4442;
+}
+
+/* media queries */
+@media (max-width: 1000px) {
+  .profileSizeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+  }
+
+}
+
+
+
+.whoami__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: montserrat,sans-serif;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.whoami__desc {
+  font-size: 1rem;
+  padding-left: 0.25rem;
+}
+
+.whoami__social {
+  margin-top: 0.5rem;
 }
 
 /* BUTTONS  */
@@ -154,6 +231,9 @@ img {
   text-transform: uppercase;
 }
 
+.bolder {
+  font-weight: bolder;
+}
 
 
 /* ANIMATIONS */

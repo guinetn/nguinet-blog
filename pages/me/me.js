@@ -1,5 +1,4 @@
 import style from './me.module.css';
-import Image from 'next/image';
 import Link from 'next/link';
 import { ConfigContext } from '../../components/configContext';
 import Contact from '../../components/contact/contact';
@@ -11,7 +10,13 @@ export default function Me() {
     	 { config =>
 			<section style={{marginTop:'10em'}}>
 
-				<div className='flexcenter'>
+				<div className={style.profileSizeContainer}>
+
+					<div className='profileSize'>		
+						<img className='profile fade-in-down' 
+						src="/images/profile.jpg"
+						height={256} width={256} alt={config.name} />
+					</div>
 
 					<div className={`${style.hello} roll-in`}>	
 						<h1>Nicolas Guinet</h1>
@@ -33,11 +38,6 @@ export default function Me() {
 
 					</div>
 
-					<div className={style.profileSize}>		
-						<img className={`${style.profile} fade-in-down`} 
-						src="/images/profile.jpg"
-						height={256} width={256} alt={config.name} />
-					</div>
 				</div>
 				
 				<MyBackPack/>
