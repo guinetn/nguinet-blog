@@ -1,5 +1,4 @@
-﻿
-import style from './postitem.module.css';
+﻿import style from './postitem.module.css';
 import Link from 'next/link';
 import utilStyles from '../../../styles/utils.module.css';
 import DateMonthAgo from '../../../components/date/date';

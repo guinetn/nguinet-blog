@@ -36,7 +36,7 @@ $$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$$
 
 1. Sort an Array
 
-```javascript
+```javascript[class="line-numbers"][class="copy-to-clipboard"]
 //strings
 const names = ["Seema", "Rekha", "Jaya"];
 names.sort();
@@ -52,7 +52,7 @@ numbers.sort((a, b) => {
 
 2. Select a random element
 
-```javascript
+```javascript[class="line-numbers"][class="copy-to-clipboard"]
 const items = ["Ball", "Bat", "Cup"]
 const randomIndex = Math.floor(Math.random()*items.length)
 items[randomIndex]
@@ -60,7 +60,7 @@ items[randomIndex]
 
 3. Reverse a string
 
-```javascript
+```javascript[class="line-numbers"][class="copy-to-clipboard"]
 function reverseString(string) {
   return string.split(" ").reverse().join(" ")
 }
@@ -70,14 +70,14 @@ revereseString("Random String")
 
 4. Check if element has a class
 
-```javascript
+```javascript[class="line-numbers"][class="copy-to-clipboard"]
 const element = document.querySelector("#element")
 element.classList.contains("active")
 ```
 
 5. String interpolation
 
-```javascript
+```javascript[class="line-numbers"][class="copy-to-clipboard"]
 const name = "Jaya"
 console.log(`Hi, ${name}. You have ${2 ** 3} new notifications.`}
 //Hi, Jaya. You have 8 new notifications.
@@ -85,7 +85,7 @@ console.log(`Hi, ${name}. You have ${2 ** 3} new notifications.`}
 
 6. Loop through an array
 
-```javascript
+```javascript[class="line-numbers"][class="copy-to-clipboard"]
 const cars = ["Ford", "BMW", "Audi" ]
 for (let car of cars) {
   console.log(car)
@@ -100,7 +100,7 @@ Audi
 
 7. Get current time
 
-```javascript
+```javascript[class="line-numbers"][class="copy-to-clipboard"]
 const date = new Date()
 const currentTime = 
   `${date.getHours()}:${date.getMintues()}:${date.getSeconds()}`
@@ -111,7 +111,7 @@ console.log(currentTimes)
 
 8. Replace part of a string
 
-```javascript
+```javascript[class="line-numbers"][class="copy-to-clipboard"]
 const string = "You are awesome."
 const replacedString = string.replace("You", "We")
 
@@ -120,7 +120,7 @@ console.log(replacedString) //Output: "We are awesome"
 
 9. Destructing variable assignment
 
-```javascript
+```javascript[class="line-numbers"][class="copy-to-clipboard"]
 let profile = ['bob', 34, 'carpenter'];
 let [name, age, job] = profile;
 console.log(name);
@@ -129,7 +129,7 @@ console.log(name);
 
 10. Using the spread operator
 
-```javascript
+```javascript[class="line-numbers"][class="copy-to-clipboard"]
 let data = [1,2,3,4,5];
 console.log(...data);
 //  1 2 3 4 5

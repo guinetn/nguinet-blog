@@ -32,9 +32,7 @@ const SwipeModal = ({ slides, isOpened, onClose } ) => {
           slidesPerView={3}
           zoom = {true}
           keyboard = {{ enabled: true }}
-          modules={[Keyboard, Navigation, Pagination, Scrollbar, Zoom]}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}>
+          modules={[Keyboard, Navigation, Pagination, Scrollbar, Zoom]}>
             {Object.values(slides.slides).map((slideContent, index) => (
               <SwiperSlide key={slideContent}>
                 <div dangerouslySetInnerHTML={{ __html: slideContent }} />

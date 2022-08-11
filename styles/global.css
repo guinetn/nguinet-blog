@@ -254,8 +254,7 @@ img {
 }
 
 .shine {
-  background-color:rgb(70 163 51);
-  color: white;
+  border: solid 1px goldenrod;
 }
 
 

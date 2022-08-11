@@ -35,10 +35,12 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return ( 
-    <ConfigContextProvider config={config}>
-      <MathJaxContext>
-          <Component {...pageProps} /> 
-      </MathJaxContext>
-    </ConfigContextProvider>)
+    <React.StrictMode>
+      <ConfigContextProvider config={config}>
+        <MathJaxContext>
+            <Component {...pageProps} /> 
+        </MathJaxContext>
+      </ConfigContextProvider>
+    </React.StrictMode>)
 }
 

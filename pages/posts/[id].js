@@ -12,6 +12,7 @@ import { ConfigContext } from '../../components/global/configContext/configConte
 // Dynamic routes: /posts/<id> 	id: name of the markdown file 
 // 1. A React component to render this page
 export default function Post({ postData }) {
+
   const { id, contentHtml, title, abstract, keywords, image, date} = {...postData};
   const [ currentURL, setCurrentURL] = useState("");
   const [ pathTitle, setPathTitle] = useState("");

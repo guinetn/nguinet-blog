@@ -1,15 +1,13 @@
-﻿import Layout from '../../components/global/layout/layout';
-
+﻿import { useState } from "react";
 import { getAllTilesIds, getRowsOfTiles } from '../../lib/wall';
-import WallRow from './wallrow/wallrow';
-import { useState } from "react";
+import Layout from '../../components/global/layout/layout';
 import SwipeModal from '../../components/modal/swipemodal/swipemodal';
+import WallRow from './wallrow/wallrow';
 
 // Dynamic routes: /posts/<id> 	id: name of the markdown file 
 // 1. A React component to render this page
 export default function Wall({ wallData }) {
-  // console.log('------------------------------------------------');
-  // console.log({wallData});
+
   const { folder, head, body, wallRows} = {...wallData};
   /*
   wallData:
@@ -41,10 +39,6 @@ export default function Wall({ wallData }) {
 
   function onClick(event) {
   
-    //event.preventDefault();
-		//console.log('click ' + event.target.nodeName);
-		//console.log('click ' + event.target.classList);
-
     if (event.target.classList.toString().indexOf("sidetitle")>=0) {
 			const closestContainer = event.target.closest("section");
 			if (closestContainer?.classList.toString().indexOf('container')>=0) {

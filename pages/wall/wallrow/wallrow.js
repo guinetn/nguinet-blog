@@ -50,22 +50,22 @@ export default function WallRow({folder, head, body, tiles }) {
 
           <section id='container1' className={style.container}>
 	    	      
-            <div key={head.title} className={`${style.item} ${style.intro}`}>
-              <h1>{head.title}</h1> 
-              <h2 className='sidetitle'>{head.sidetitle}</h2>
+            <div key={head?.title} className={`${style.item} ${style.intro}`}>
+              <h1>{head?.title}</h1> 
+              <h2 className='sidetitle'>{head?.sidetitle}</h2>
               <div dangerouslySetInnerHTML={{ __html: body }} />
             </div>
 
-            {tiles.map(({ head, body, slides}, i) => (
+            {tiles?.map(({ head, body, slides}, i) => (
               <article key={`tile-${i}`} className={`${style.item} ${style.back01} ${style.articleCell}`}>
                   <div className={`${style.articleContent}`}>
                     <div dangerouslySetInnerHTML={{ __html: body }}/>
                   </div>
-                  <h2>{head.title}</h2>
+                  <h2>{head?.title}</h2>
                   <a href="images/fulls/01.jpg"></a>
                  
                   <data key={`slide-${i}`} className={style.slides}>
-                  {slides.map((s,j)=> 
+                  {slides?.map((s,j)=> 
                
                     <div key={`sl-a${j}`}>
                       <div dangerouslySetInnerHTML={{ __html: s.slidecontent }} />
