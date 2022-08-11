@@ -1,11 +1,12 @@
-﻿import style from './postitem.module.css';
+﻿
+import style from './postitem.module.css';
 import Link from 'next/link';
-import utilStyles from '../../styles/utils.module.css';
-import DateMonthAgo from '../../components/date';
-import Keyword from '../../components/keyword/keyword';
+import utilStyles from '../../../styles/utils.module.css';
+import DateMonthAgo from '../../../components/date/date';
+import Keyword from '../../../components/keyword/keyword';
 
 export default function Postitem({ id, title, abstract, keywords, image, date }) {
-
+  
   return (
     <>
     <Link href={`/posts/${id}`}>
@@ -26,13 +27,3 @@ export default function Postitem({ id, title, abstract, keywords, image, date })
     </>
   );
 }
-
-/*
-
-title: 'Two Forms of Pre-rendering'
-abstract: 'Two Forms of Pre-rendering lorem gpsdkgp^k ^skpg ksdgk sdkg sdjgj sdmjgdslj gsdmjgmsdgj smdg'
-date: '2020-01-01'
-keywords: 'react, js, devops'
-image: 
-
-*/

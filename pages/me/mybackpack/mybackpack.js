@@ -1,79 +1,161 @@
+import React, { useRef, useState } from "react";
 import style from './mybackpack.module.css'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Keyboard, Parallax } from 'swiper';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export default function MyBackPack() {
 
     return (
       <section className='margintop35'> 
 
-        <h2>🎒 My Backpack</h2>
+        <div className={`flexleft ${style.circle256}`}>
+          <h2 className='marginleft1em'>🛠️ My Backpack</h2>
+        </div>
+
         <p>This is the list of technologies I’ve been working with. I'm also a constant learner, open to learn more libraries, languages, etc!</p>
 
-        <div className={style.tabsContainer}>
-		
-          <input id={style.tab1} className={style.tab1} type="radio" name="tab-group" defaultChecked />
-          <label htmlFor={style.tab1}>Front</label>
-          <input id={style.tab2} className={style.tab2} type="radio" name="tab-group" />
-          <label htmlFor={style.tab2}>Back</label>
-          <input id={style.tab3} className={style.tab3} type="radio" name="tab-group" />
-          <label htmlFor={style.tab3}>Desktop</label>
-          <input id={style.tab4} className={style.tab4} type="radio" name="tab-group" />
-          <label htmlFor={style.tab4}>IA</label>
-          <input id={style.tab5} className={style.tab5} type="radio" name="tab-group" />
-          <label htmlFor={style.tab5}>Web 3.0</label>
+        <div
+          slot="container-start"
+          className="parallax-bg"
+          style={{
+            "background-image":
+              "url(https://swiperjs.com/demos/images/nature-1.jpg)",
+          }}
+          data-swiper-parallax="-23%"
+        ></div>
 
-          <div className={style.content}>
-            
-            <div className={style.tab1Content}>
-                <p> I Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, aperiam, enim odit placeat minus ab vero molestiae ad fugit maiores eaque saepe debitis assumenda ut ipsam eius sit repellendus dolore.</p>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, in magni illo dolore dicta vero.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, minus, aspernatur voluptatem doloribus labore modi.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, exercitationem quia id accusamus beatae sunt? Dolorum mollitia sint debitis delectus.</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, accusantium, provident ab quo sed blanditiis perspiciatis distinctio aut voluptatibus cum odio quaerat iure vel dolorum fugit explicabo suscipit tenetur. Sed!</p>
-              </div>
-
-              <div className={style.tab2Content}>
-                <p>II Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, aperiam, enim odit placeat minus ab vero molestiae ad fugit maiores eaque saepe debitis assumenda ut ipsam eius sit repellendus dolore.</p>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, in magni illo dolore dicta vero.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, minus, aspernatur voluptatem doloribus labore modi.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, exercitationem quia id accusamus beatae sunt? Dolorum mollitia sint debitis delectus.</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, accusantium, provident ab quo sed blanditiis perspiciatis distinctio aut voluptatibus cum odio quaerat iure vel dolorum fugit explicabo suscipit tenetur. Sed!</p>
-              </div>
-              
-              <div className={style.tab3Content}>
-                <p>III Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, aperiam, enim odit placeat minus ab vero molestiae ad fugit maiores eaque saepe debitis assumenda ut ipsam eius sit repellendus dolore.</p>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, in magni illo dolore dicta vero.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, minus, aspernatur voluptatem doloribus labore modi.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, exercitationem quia id accusamus beatae sunt? Dolorum mollitia sint debitis delectus.</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, accusantium, provident ab quo sed blanditiis perspiciatis distinctio aut voluptatibus cum odio quaerat iure vel dolorum fugit explicabo suscipit tenetur. Sed!</p>
-              </div>
-
-              <div className={style.tab4Content}>
-                <p>IV Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, aperiam, enim odit placeat minus ab vero molestiae ad fugit maiores eaque saepe debitis assumenda ut ipsam eius sit repellendus dolore.</p>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, in magni illo dolore dicta vero.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, minus, aspernatur voluptatem doloribus labore modi.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, exercitationem quia id accusamus beatae sunt? Dolorum mollitia sint debitis delectus.</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, accusantium, provident ab quo sed blanditiis perspiciatis distinctio aut voluptatibus cum odio quaerat iure vel dolorum fugit explicabo suscipit tenetur. Sed!</p>
-              </div>
-
-              <div className={style.tab5Content}>
-                <p>V Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, aperiam, enim odit placeat minus ab vero molestiae ad fugit maiores eaque saepe debitis assumenda ut ipsam eius sit repellendus dolore.</p>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, in magni illo dolore dicta vero.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, minus, aspernatur voluptatem doloribus labore modi.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, exercitationem quia id accusamus beatae sunt? Dolorum mollitia sint debitis delectus.</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, accusantium, provident ab quo sed blanditiis perspiciatis distinctio aut voluptatibus cum odio quaerat iure vel dolorum fugit explicabo suscipit tenetur. Sed!</p>
-              </div>
+        <Swiper
+        spaceBetween={0}
+        speed={600}
+        parallax={true}
+        pagination={{
+          clickable: true,
+          type: "progressbar",
+        }}
+        keyboard={{
+          enabled: true,
+        }}
+        grabCursor={true}
+        navigation={true}
+        modules={[Keyboard, Parallax, Pagination, Navigation]}
+        className="mySwiper">
+          
+        <SwiperSlide>
+          <div className={style.slideContainer}>
+           <div className='colorGold bolder' data-swiper-parallax="-300">
+            DotNet Core
           </div>
-        </div>
+          <div className='colorGrey italic' data-swiper-parallax="-200">
+            C#, Winforms, WPF, MAUI, Asp.Net Core
+          </div>
+          <div className={style.text} data-swiper-parallax="-100">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+            </p>
+          </div>  
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className={style.slideContainer}>
+           <div className='colorGold bolder' data-swiper-parallax="-300">
+            Javascript, React, Vue, NextJS, RxJS
+          </div>
+          <div className='colorGrey italic' data-swiper-parallax="-200">
+            Subtitle
+          </div>
+          <div className={style.text} data-swiper-parallax="-100">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+            </p>
+          </div>  
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className={style.slideContainer}>
+           <div className='colorGold bolder' data-swiper-parallax="-300">
+            C, C++, Python, 
+          </div>
+          <div className='colorGrey italic' data-swiper-parallax="-200">
+            Subtitle
+          </div>
+          <div className={style.text} data-swiper-parallax="-100">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+            </p>
+          </div>  
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className={style.slideContainer}>
+           <div className='colorGold bolder' data-swiper-parallax="-300">
+            IA: TensorFlow, Keras, R
+          </div>
+          <div className='colorGrey italic' data-swiper-parallax="-200">
+            Subtitle
+          </div>
+          <div className={style.text} data-swiper-parallax="-100">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+            </p>
+          </div>  
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className={style.slideContainer}>
+           <div className='colorGold bolder' data-swiper-parallax="-300">
+            DataViz
+          </div>
+          <div className='colorGrey italic' data-swiper-parallax="-200">
+            Subtitle
+          </div>
+          <div className={style.text} data-swiper-parallax="-100">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+            </p>
+          </div>  
+          </div>
+        </SwiperSlide>
+
+  
+        </Swiper>
+
       </section>
     )
 }

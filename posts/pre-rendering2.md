@@ -13,7 +13,9 @@ Next.js has two forms of pre-rendering 2: **Static Generation** and **Server-sid
 
 Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
 
-```javascript
+$$\frac{10}{4x} \approx 2^{12}$$
+
+```javascript[class="line-numbers"][class="copy-to-clipboard"]
 //strings
 const names = ["joe", "Rekha", "Jaya"];
 names.sort();
@@ -26,3 +28,5 @@ numbers.sort((a, b) => {
 });
 //[ 8, 87, 101 ]
 ```
+
+

@@ -1,7 +1,7 @@
-import Layout, { siteTitle } from '../../components/layout';
+import Layout from '../../components/global/layout/layout';
 import utilStyles from '../../styles/utils.module.css';
 import { getSortedPostsData } from '../../lib/posts';  // use FRONT MATTER lib to extract post header
-import Postitem from '../../components/postitem/postitem';
+import Postitem from './postitem/postitem';
 import style from './index.module.css'
 
 /*

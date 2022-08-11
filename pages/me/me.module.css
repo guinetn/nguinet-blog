@@ -1,7 +1,12 @@
-.profileSizeContainer {
+.profileSizeIntro {
 	display: flex;
 	justify-content: center;
 	flex-direction: row-reverse;
+}
+
+.profileSizeContainer {
+	margin-top:10em;
+	margin-bottom:10em;
 }
 
 .hello{
@@ -26,10 +31,14 @@
     position: absolute;
 }
 
-/* media queries */
 @media (max-width: 1000px) {
 	
-	.profileSizeContainer{
+	.profileSizeContainer {
+		margin-top:5em;
+		margin-bottom:2em;
+	}
+
+	.profileSizeIntro{
 		display: flex;
 		flex-direction: column;
 		justify-content: left;

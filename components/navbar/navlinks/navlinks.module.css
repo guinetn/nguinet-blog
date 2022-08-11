@@ -3,7 +3,6 @@
 	align-items: center;
 }
 
-/* media queries */
 @media (max-width: 768px) {
 	.NavLinkHolder {
 		flex-direction: column;

@@ -1,8 +1,7 @@
-﻿import Layout from '../../components/layout';
+﻿import Layout from '../../components/global/layout/layout';
+
 import { getAllTilesIds, getRowsOfTiles } from '../../lib/wall';
-import utilStyles from '../../styles/utils.module.css';
-import style from './id.module.css';
-import WallRow from '../../components/wall/wallrow/wallrow';
+import WallRow from './wallrow/wallrow';
 import { useState } from "react";
 import SwipeModal from '../../components/modal/swipemodal/swipemodal';
 
@@ -42,7 +41,7 @@ export default function Wall({ wallData }) {
 
   function onClick(event) {
   
-    //event.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
+    //event.preventDefault();
 		//console.log('click ' + event.target.nodeName);
 		//console.log('click ' + event.target.classList);
 
@@ -55,7 +54,7 @@ export default function Wall({ wallData }) {
 		else if (event.target.classList.toString().indexOf('copyable')>=0) {
 			const stringToCopy = event.target.innerText;
 			try {
-					navigator.clipboard.writeText( stringToCopy ).then( ()=>{ console.log('ok');});
+					navigator.clipboard.writeText( stringToCopy );
 		  	} catch (err) {
 		      console.error(`Failed to copy ${stringToCopy}`, err);
 				}
@@ -115,25 +114,6 @@ export async function getStaticPaths() {
   const paths = getAllTilesIds();
   return {
     paths,
-    //fallback: true,       // any paths not returned by getStaticPaths will result in a 404 page.
     fallback: false         // any paths not returned by getStaticPaths will result in a 404 page.
-    //fallback: 'blocking', // new paths will be server-side rendered with getStaticProps, and cached for future requests so it only happens once per path.
   };
 }
-
-
-/*
-
-wallData:
-  id: "rust"
-  title: "RUST LANG"
-  subtitle: "RUST-1 ↓ ↓"
-  image: "images/posts/solen-feyissa-tSfSZb-eocE-unsplash.jpg"
-  contentHtml: "<p>A responsive portfolio site<br />\r\ntemplate by HTML5 UP</p>\n"
-
-  wallRows: Array(2)
-    0: {folder: 'rust/cargo', title: 'cargo', sidetitle: 'cargo-1', image: 'images/posts/alexander-ant-hheHwahRhA4-unsplash.jpg', content: '<p>A rust résumé site<br />\r\ntemplate by HTML5 UP</p>'}
-    1: {folder: 'rust/rust', title: 'rust 2', sidetitle: 'rust ↓', image: 'images/posts/solen-feyissa-tSfSZb-eocE-unsplash.jpg', content: '<p>A rust portfolio site<br />\r\ntemplate by HTML5 UP</p>'}
-
-
-*/

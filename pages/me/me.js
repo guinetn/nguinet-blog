@@ -1,6 +1,6 @@
 import style from './me.module.css';
 import Link from 'next/link';
-import { ConfigContext } from '../../components/configContext';
+import { ConfigContext } from '../../components/global/configContext/configContext';
 import Contact from '../../components/contact/contact';
 import MyBackPack from './mybackpack/mybackpack';
 
@@ -8,9 +8,9 @@ export default function Me() {
 	return (
 		 <ConfigContext.Consumer>
     	 { config =>
-			<section style={{marginTop:'10em'}}>
+			<section className={style.profileSizeContainer}>
 
-				<div className={style.profileSizeContainer}>
+				<div className={style.profileSizeIntro}>
 
 					<div className='profileSize'>		
 						<img className='profile fade-in-down' 

@@ -7,7 +7,7 @@ function Navlinks(props) {
         <div className={style.NavLinkHolder}>
 
              <Link href='/posts'> 
-              <a className={style.link}>blog</a> 
+              <a className={style.link}>posts</a> 
             </Link>
             
             <Link href='/projects'> 

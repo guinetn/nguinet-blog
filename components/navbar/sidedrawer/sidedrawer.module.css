@@ -43,7 +43,6 @@
 	margin: 20px 0 5px 0;
 }
 
-/* media queries */
 @media (min-width: 768px) {
 	.Backdrop {
 		visibility: hidden;

@@ -91,3 +91,32 @@
   /*
   https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown
   */
+
+  .circle256 {
+	border-radius: 16px;
+	background-color: #1e1e1e;
+	width: 30vw;
+  }
+
+  .circle256 {
+	border-radius: 16px;
+	background-color: #1e1e1e;
+  }
+
+  @media (max-width:1400px) {
+	  .circle256 {
+		width: 40vw;
+	  }
+  }
+
+  @media (max-width:1200px) {
+	.circle256 {
+	  width: 60vw;
+	}
+}
+
+@media (max-width:1000px) {
+	.circle256 {
+	  width: 90vw;
+	}
+}

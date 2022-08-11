@@ -1,14 +1,12 @@
-import Head from 'next/head';
-import Layout, { siteTitle } from '../../components/layout';
+import Layout from '../../components/global/layout/layout';
 import utilStyles from '../../styles/utils.module.css';
 import { getSortedProjectsData } from '../../lib/projects';  // use FRONT MATTER lib to extract project header
 import Link from 'next/link';
-import Date from '../../components/date';
+import Date from '../../components/date/date';
 
 /*
 pages/index.js is associated with the / route
 pages/projects/first-project.js is associated with the /projects/first-project route
-
 
  “Hey next, this page has some data dependencies — so when you pre-render this page at build time, make sure to resolve them first!”
             - in production mode runs at build time 
@@ -26,9 +24,7 @@ export async function getStaticProps() {
 export default function Home({ allProjectssData }) {
   return (
     <Layout>
-      {/* Keep the existing code here */}
-
-      {/* Add this <section> tag below the existing <section> tag */}
+     
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>PROJECTS</h2>
         

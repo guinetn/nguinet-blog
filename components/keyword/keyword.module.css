@@ -1,3 +1,7 @@
+.keywordsContainer {
+    margin-top: 0.2em;
+}
+
 .keyword {
     background-color: #9d1515;
     font-size: large;
@@ -10,3 +14,4 @@
     text-align: center;
     display: inline-block
 }
+

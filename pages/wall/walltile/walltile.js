@@ -20,11 +20,3 @@ export default function WallTile({id, tiletitle, tilesubtitle, content, image })
     </>
   );
 }
-
-/*
-
-folder
-title: 'Two Forms of Pre-rendering'
-image: 
-
-*/

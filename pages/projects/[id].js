@@ -1,8 +1,7 @@
-﻿import Layout from '../../components/layout';
+﻿import Layout from '../../components/global/layout/layout';
 import { getAllProjectIds, getProjectData } from '../../lib/projects';
-import Date from '../../components/date';
+import Date from '../../components/date/date';
 import Head from 'next/head';
-import utilStyles from '../../styles/utils.module.css';
 
 // Dynamic routes: /projects/<id> 	id: name of the markdown file 
 // 1. A React component to render this page
@@ -41,8 +40,6 @@ export async function getStaticPaths() {
   const paths = getAllProjectIds();
   return {
     paths,
-    //fallback: true,       // any paths not returned by getStaticPaths will result in a 404 page.
     fallback: false         // any paths not returned by getStaticPaths will result in a 404 page.
-    //fallback: 'blocking', // new paths will be server-side rendered with getStaticProps, and cached for future requests so it only happens once per path.
   };
 }

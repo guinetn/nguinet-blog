@@ -12,8 +12,13 @@ export default function Contact() {
     <>
       <section className='margintop35'> 
 
-				<h2 id='getintouch'>📐 Have a project in mind?</h2>
-				Let's exchange about it!
+      <div id='getintouch' className='flexleft'>
+          <div className={`${style.circle256}`}>
+            <h2 className='marginleft1em'> 📐 Have a project in mind?</h2>
+          </div>
+      </div>
+				
+        <p>Let's exchange about it!</p>
 
         <div className={style.form}>
 

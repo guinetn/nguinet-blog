@@ -84,7 +84,39 @@ https://help.unsplash.com/en/articles/2534409-crediting-photographers
 
 ## Add syntax highlighter to posts
 
+### remark-prism
+
+https://css-tricks.com/syntax-highlighting-prism-on-a-next-js-site/     highlighted lines, line-numbers
+```js[class="line-numbers"][class="hide-numbers"][data-line="3,8-10"]
+
+https://github.com/remarkjs
+To use a plugin programmatically, call the use() 
+To create a plugin, first read up on the concept of plugins.
+
+Syntax highlighter for markdown code blocks using Prism - with support for certain plugins: https://prismjs.com/plugins/
+https://github.com/sergioramos/remark-prism
+    
+
+remark-prism supports prism plugins including the line number plugin.
+    https://mdsvex.com/docs#remarkplugins--rehypeplugins
+
+    https://gadgetofficials.com/syntax-highlighting-and-more-with-prism-on-a-static-site-css-tricks/ ★★★
+
+    https://prismjs.com/plugins/line-numbers/
+    ex: <body class="line-numbers"> <!-- enabled for the whole page -->
+    work only for code blocks (<pre><code>) and not for inline code.
+    To give all code blocks line numbers, add the line-numbers class to the <body> of the page.
+
+- https://unifiedjs.com/
+- https://css-tricks.com/responsible-markdown-in-next-js/
 - https://www.npmjs.com/package/remark-prism
+- https://stackoverflow.com/questions/62685856/use-prismjs-in-next-js-with-remark-to-hightlight-code-from-markdown
+- https://codesandbox.io/examples/package/remark-prism
+- https://ionicreacthub.com/blog/how-i-built-this-blog
+- https://unifiedjs.com/explore/package/remark-code-figure/
+
+import plugins from node_modules of prism js to perform specific role.
+
 
 >yarn add remark-prism
 
@@ -97,7 +129,7 @@ post.js
  const processedContent = await remark()
   -.use(html)
   +.use(html, { sanitize: false })
-  +.use(prism) 
+  +.use(prism)              .use(prism) made SSR significantly slower ! It's a problem in dev mode, but not in html exported site.
  .process(matterResult.content);
 
  mypost.md
@@ -105,7 +137,21 @@ post.js
  const user = { 'name':'joe', 'age': 25};
   ```
 
-  ## Add MathJax: Latex, MAthML, AsciiMath
+* Add copy code button to prism
+
+import plugins from node_modules of prism js to perform specific role.
+to display copy button, for that below plugins should be imported - no other code changes are required other than import
+
+import Prism from "prismjs";
+import "prismjs/plugins/toolbar/prism-toolbar.min.css";
+import "prismjs/plugins/toolbar/prism-toolbar.min";
+import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min";
+
+https://prismjs.com/plugins/copy-to-clipboard/
+https://css-tricks.com/responsible-markdown-in-next-js/
+https://stackoverflow.com/questions/71893728/prism-js-copy-to-clipboard-not-working-in-my-nextjs-app
+
+## Add MathJax: Latex, MAthML, AsciiMath
   
   - https://www.npmjs.com/package/better-react-mathjax
   >npm i better-react-mathjax

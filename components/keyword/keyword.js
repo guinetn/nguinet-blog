@@ -2,7 +2,7 @@
 
 export default function Keywords({ keywords }) {
   return (
-    <div>
+    <div className={style.keywordsContainer}>
     { keywords.split(',').map( k=> 
         <small key={k} className={style.keyword}> {k.trim().toLowerCase()} </small>
       )

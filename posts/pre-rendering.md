@@ -141,5 +141,5 @@ console.log(Math.max(...combined));
 // 10
 ```
 
-That's all
+End
 

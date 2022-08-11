@@ -1,87 +1,27 @@
-/* LAYOUT */
-
-.tabsContainer {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /*width: 50%;			 wrap + width 50% (> resting width for it) = go to next row */
+.slideContainer {
+	margin: 1em 4em;
 }
 
-.content {
-	background: #f1f1f1;  /* Fondo del contenido */
-	border-radius: 0 .25em .25em .25em;
-	min-height: 20em;  /* Alto del contenido */
-	position: relative;
-	width: 100%;
-	z-index: 5;
-    overflow: auto;     /* control tabs content behavior */
-	border: solid 1px;
+.circle256 {
+	border-radius: 16px;
+	background-color: #1e1e1e;
+	width: 30vw;
+  }
+
+  .circle256 {
+	border-radius: 16px;
+	background-color: #1e1e1e;
+  }
+
+  @media (max-width:1200px) {
+	.circle256 {
+	  width: 50vw;
+	}
 }
 
-
-/* 🔥 MAGIC KEY 0: tab visibility 'trigger' hack */  
-.tabsContainer input {
-	display: none;
+@media (max-width:1000px) {
+	.circle256 {
+	  width: 90vw;
+	}
 }
 
-.tabsContainer label {
-	background: #f9f9f9;  
-	border-radius: .25em .25em 0 0;
-    border-top: solid 1px #151616;
-    border-left: solid 1px #151616;
-    border-right: solid 1px #151616;
-    color: #888;  /* Text color of the tab */
-	cursor: pointer;
-	display: block;
-	font-size: 1em;  
-	height: 2.5em;
-	line-height: 2.5em;
-	margin-right: .25em;
-	padding: 0 1.5em;
-	text-align: center;
-	flex: 0 0 7em;
-}
-
-/* Hover tab action: change color */
-.tabsContainer input:hover + label {
-	background: #ddd; 
-	color: black;  
-	
-}
-
-/* When tab is selected (= its input checked) */
-.tabsContainer input:checked + label {
-    background: #37AEE2 ; 
-	color: #444; 
-    border: solid 1px #37AEE2;
-    border-bottom: solid 2px #37AEE2;
-    font-weight: bold;
-	/*
-	-webkit-transition: .1s;
-	-moz-transition: .1s;
-	-o-transition: .1s;
-	-ms-transition: .1s;
-	*/
-}
-
-.content div {
-	opacity: 0;             /* 🔥 MAGIC KEY 1: all div in the global 'content' have opacity = 0 */
-	padding: 1.5em;
-	position: absolute;
-	z-index: -100;
-    color: black;
-	/*
-	transition: all linear 0.1s;
-	*/
-}
-
-.tabsContainer input.tab1:checked ~ .content .tab1Content,		/* 🔥 MAGIC KEY 2: if checked... */
-.tabsContainer input.tab2:checked ~ .content .tab2Content,
-.tabsContainer input.tab3:checked ~ .content .tab3Content, 
-.tabsContainer input.tab4:checked ~ .content .tab4Content, 
-.tabsContainer input.tab5:checked ~ .content .tab5Content 
-{
-    opacity: 1;												/* 🔥 MAGIC KEY 3: ALL ITS content-x have opacity=1 */		
-    z-index: 100;
-}

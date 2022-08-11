@@ -1,6 +1,5 @@
-import style from './index.module.css';
-import { ConfigContext } from '../../../components/configContext';
-import Layout from '../../../components/layout';
+import { ConfigContext } from '../../../components/global/configContext/configContext';
+import Layout from '../../../components/global/layout/layout';
 
 export default function About() {
 	return (

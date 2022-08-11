@@ -1,7 +1,7 @@
-import Layout from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
+import Layout from '../../components/global/layout/layout';
 import { getTiles } from '../../lib/wall'; 
-import WallTile from '../../components/wall/walltile/walltile';
+import WallTile from './walltile/walltile';
 import style from './index.module.css'
 
 /*

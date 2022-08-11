@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from './layout.module.css';
-import { ConfigContext } from './configContext';
-import Navbar from './navbar/navbar';
+import { ConfigContext } from '../configContext/configContext';
+import Navbar from '../../navbar/navbar';
 
 export default function Layout({ children }) { 
 

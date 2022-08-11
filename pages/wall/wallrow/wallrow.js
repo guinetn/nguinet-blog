@@ -1,7 +1,4 @@
 ﻿import style from './wallrow.module.css';
-// import utilStyles from '../../styles/utils.module.css';
-// import DateMonthAgo from '../../components/date';
-// import Keyword from '../../components/keyword/keyword';
 
 export default function WallRow({folder, head, body, tiles }) { 
 
@@ -42,7 +39,7 @@ export default function WallRow({folder, head, body, tiles }) {
 
       let x = 1.0*closestContainer.style.left.replace('px','') + delta*direction;
       x = Math.min(0,x);
-      x = Math.max( -2*document.defaultView.window.visualViewport.width-15, x); //-15 to see the right border
+      x = Math.max( -2*document.defaultView.window.visualViewport.width-15, x); //-15 to keep the right border visible
       closestContainer.style.left = x + 'px';
  };
 
@@ -87,19 +84,3 @@ export default function WallRow({folder, head, body, tiles }) {
   );
 }
 
-
-/*
-
-wallData:
-  id: "rust"
-  title: "RUST LANG"
-  subtitle: "RUST-1 ↓ ↓"
-  image: "images/posts/solen-feyissa-tSfSZb-eocE-unsplash.jpg"
-  contentHtml: "<p>A responsive portfolio site<br />\r\ntemplate by HTML5 UP</p>\n"
-
-  wallRows: Array(2)
-    0: {folder: 'rust/cargo', title: 'cargo', sidetitle: 'cargo-1', image: 'images/posts/alexander-ant-hheHwahRhA4-unsplash.jpg', content: '<p>A rust résumé site<br />\r\ntemplate by HTML5 UP</p>'}
-    1: {folder: 'rust/rust', title: 'rust 2', sidetitle: 'rust ↓', image: 'images/posts/solen-feyissa-tSfSZb-eocE-unsplash.jpg', content: '<p>A rust portfolio site<br />\r\ntemplate by HTML5 UP</p>'}
-
-
-*/
