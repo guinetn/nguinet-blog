@@ -14,7 +14,7 @@ export default function Postitem({ id, title, abstract, keywords, image, date })
           
           <a className={`glink ${style.posttitle}`}>
             <h3 >{title}</h3>
-            <div className={style.abstract}>{abstract.substring(0,60)}…</div>
+            <div className={style.abstract}>{abstract?.substring(0,60)}…</div>
           </a>
 
 

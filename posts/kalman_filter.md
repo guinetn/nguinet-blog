@@ -2,8 +2,8 @@
 title: 'Kalman Filter'
 abstract: 'A way to estimate the next state'
 date: '2022-08-08'
-keywords: 'mechanic, kalman, control loop'
-image: 'images/posts/alexander-ant-hheHwahRhA4-unsplash.jpg'
+keywords: 'engineering, kalman, control loop'
+image: 'images/posts/bkgnd/federico-beccari-ahi73ZN5P0Y-unsplash.jpg'
 ---
 
 # KALMAN FILTER
@@ -33,10 +33,10 @@ When you have uncertain information about some dynamic system, and you can make 
 Its ability to extract accurate information seems almost magical
 
 Provides a true state estimate for a real time system 
-- Tracking the actual values for highly sensitive sensors
+- Tracking the actual values for highly sensitive sensors 
 - Tracking the velocity of objects with uncertainty
 
-![kalman filter](../assets/kalman_filter.jpg)
+![kalman filter](../images/posts/kalman_filter.jpg)
 
 ### IMU - INERTIAL MEASUREMENT UNIT
 
@@ -75,3 +75,7 @@ guesses using evidence. These are tools designed to help science itself test ide
 (and are the basis of what we call “statistical significance”).
 
 
+#### Credits
+
+Photo by <a href="https://unsplash.com/@federize?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Federico Beccari</a> on <a href="https://unsplash.com/s/photos/transition?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  

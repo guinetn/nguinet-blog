@@ -14,6 +14,7 @@ pages/posts/first-post.js is associated with the /posts/first-post route
             - inside the function, you can fetch external data and send it as props to the page.*/
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
+
   return {
     props: {
       allPostsData,

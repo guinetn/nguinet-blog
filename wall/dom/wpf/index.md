@@ -2,5 +2,5 @@
 title: 'WPF'
 subtitle: 'about WPF....'
 sidetitle: 'WPF-1'
-image: 'images/posts/alexander-ant-hheHwahRhA4-unsplash.jpg'
+image: 'images/posts/bkgnd/alexander-ant-hheHwahRhA4-unsplash.jpg'
 ---

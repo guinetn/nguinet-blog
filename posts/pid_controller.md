@@ -3,7 +3,7 @@ title: 'PID controller'
 abstract: 'Control loop in C'
 date: '2022-08-10'
 keywords: 'mechanic, engineering, lego'
-image: 'images/posts/alexander-ant-hheHwahRhA4-unsplash.jpg'
+image: 'images/posts/bkgnd/arun-prakash-8GVM5TvexGQ-unsplash.jpg'
 ---
 
 ## PID - PROPORTIONAL–INTEGRAL–DERIVATIVE CONTROLLER
@@ -18,7 +18,7 @@ The PID controller
 - PID algorithm will increase engine speed to target the measured speed to the desired speed with minimal delay.
 - Historic: 1920, automatic steering systems for ships
 
-![PID](assets/pid.png)
+![PID](../images/posts/pid.png)
 
 PID.h
 ```c
@@ -155,3 +155,8 @@ float PIDController_Update(PIDController *pid, float setpoint, float measurement
 
 [Kalman filter-based IMU-inertial measurement units](https://www.bzarg.com/p/improving-imu-attitude-estimates-with-velocity-data/)
 Automatic differentiation makes a linearized extended Kalman filter (EKF) particularly easy and robust to implement.
+
+#### Credits
+
+Photo by <a href="https://unsplash.com/es/@its_arunprakash?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Arun Prakash</a> on <a href="https://unsplash.com/s/photos/sensors?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  

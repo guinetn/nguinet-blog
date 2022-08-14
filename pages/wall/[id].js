@@ -20,7 +20,7 @@ export default function Wall({ wallData }) {
       0:
         content: "<p>A rust résumé site<br />\r\ntemplate by HTML5 UP</p>"
         folder: "rust/cargo"
-        image: "images/posts/alexander-ant-hheHwahRhA4-unsplash.jpg"
+        image: "images/posts/bkgnd/alexander-ant-hheHwahRhA4-unsplash.jpg"
         sidetitle: "cargo-1 ↓"
         tiles: Array(4)
           0:

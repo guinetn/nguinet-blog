@@ -3,7 +3,7 @@ title: 'Lego´s engineering'
 abstract: 'How to solve problems in mechanical engineering'
 date: '2022-08-10'
 keywords: 'mechanic, engineering, lego'
-image: 'images/posts/alexander-ant-hheHwahRhA4-unsplash.jpg'
+image: 'images/posts/bkgnd/steinar-engeland-drw6RtOKDiA-unsplash.jpg'
 ---
 
 ## Making lego car climb obstacles
@@ -32,3 +32,8 @@ A great lesson of mechanical engineering
 
 - [Making Lego Car CLIMB Obstacles](https://www.youtube.com/watch?v=MwHHErfX9hI)
 - [continuous improvement](https://publish.twitter.com/?query=https%3A%2F%2Ftwitter.com%2FTechAmazing%2Fstatus%2F1486481324638720000&widget=Tweet)
+
+#### Credits
+
+Photo by <a href="https://unsplash.com/@steinart?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Steinar Engeland</a> on <a href="https://unsplash.com/s/photos/steps?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
