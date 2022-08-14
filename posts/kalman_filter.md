@@ -1,7 +1,7 @@
 ---
 title: 'Kalman Filter'
 abstract: 'A way to estimate the next state'
-date: '2022-08-08'
+date: '2021-05-10'
 keywords: 'engineering, kalman, control loop'
 image: 'images/posts/bkgnd/federico-beccari-ahi73ZN5P0Y-unsplash.jpg'
 ---

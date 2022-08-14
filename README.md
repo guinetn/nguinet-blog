@@ -273,3 +273,11 @@ export default function MyPage() {
 npm i swiper
 https://swiperjs.com/react
 https://swiperjs.com/swiper-api#prop-swiper-allowSlidePrev
+
+## Add Script component
+
+To render <script> we must 
+- add `import Script from 'next/script'`
+- use it: <Script src="https://www.google-analytics.com/analytics.js" />
+
+Ref: https://nextjs.org/docs/basic-features/script

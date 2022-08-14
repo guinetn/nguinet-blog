@@ -1,7 +1,7 @@
 ---
 title: 'Lego´s engineering'
 abstract: 'How to solve problems in mechanical engineering'
-date: '2022-08-10'
+date: '2021-07-21'
 keywords: 'mechanic, engineering, lego'
 image: 'images/posts/bkgnd/steinar-engeland-drw6RtOKDiA-unsplash.jpg'
 ---

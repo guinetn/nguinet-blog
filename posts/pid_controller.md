@@ -2,7 +2,7 @@
 title: 'PID controller'
 abstract: 'Control loop in C'
 date: '2022-08-10'
-keywords: 'mechanic, engineering, lego'
+keywords: 'mechanic, engineering, lego, clang'
 image: 'images/posts/bkgnd/arun-prakash-8GVM5TvexGQ-unsplash.jpg'
 ---
 

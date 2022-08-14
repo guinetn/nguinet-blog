@@ -8,6 +8,7 @@ import DateMonthAgo from '../../components/date/date';
 import Keyword from '../../components/keyword/keyword';
 import { MathJax } from "better-react-mathjax";
 import { ConfigContext } from '../../components/global/configContext/configContext';
+import Script from 'next/script'
 
 // Dynamic routes: /posts/<id> 	id: name of the markdown file 
 // 1. A React component to render this page

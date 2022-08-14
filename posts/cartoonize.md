@@ -1,7 +1,7 @@
 ---
 title: 'Cartoonization tool'
 abstract: 'Use AI to change your face'
-date: '2022-08-13'
+date: '2022-02-01'
 keywords: 'AI, image, cartoon'
 image: 'images/posts/bkgnd/julien-tromeur-6-adg66qleM-unsplash.jpg'
 ---
