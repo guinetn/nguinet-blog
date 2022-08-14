@@ -159,7 +159,12 @@ img {
 }
 
 
+/**/
 
+.gist {
+  width: 80vw !important;
+  height: 550px !important;
+}
 
 
 /* PROFILE */

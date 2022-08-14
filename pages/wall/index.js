@@ -45,7 +45,7 @@ export default function Wall({ allWallTiles }) {
 
       <div className='flexspacearound'>
         <h2 className={`${utilStyles.headingLg} colorGold`}>THE WALL</h2>
-        <input type="text" className={style.search} onChange={filterWall} placeholder={`search in ${allWallTiles.length} tiles`}/> 
+        <input type="search" className={style.search} onChange={filterWall} placeholder={`search in ${allWallTiles.length} tiles`}/> 
       </div> 
 
       <div id='postsContainer' className={style.postsContainer}>

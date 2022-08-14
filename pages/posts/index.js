@@ -44,7 +44,7 @@ export default function Home({ allPostsData }) {
 
         <div className='flexspacearound'>
           <h2 className={`${utilStyles.headingLg} colorGold`}>MY BLOG</h2>
-          <input type="text" className={style.search} onChange={filteringPosts} placeholder={`search in ${allPostsData.length} posts`}/> 
+          <input type="search" className={style.search} onChange={filteringPosts} placeholder={`search in ${allPostsData.length} posts`}/> 
         </div> 
         
         <div id='postsContainer' className={style.postsContainer}>

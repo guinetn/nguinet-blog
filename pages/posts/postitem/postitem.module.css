@@ -66,6 +66,17 @@
 }
 
 
+.abstract {
+    font-style: oblique;
+    color: rgb(255, 255, 255);
+    padding: 0.5em;
+    border-radius: 0;
+    font-size: medium;
+    width: 80%;
+    margin: 0 auto;
+    border-top: solid 1px #3c3b3b;
+    border-bottom: solid 1px #3c3b3b;
+}
 
 /*Override remark highlight parameters */ 
 

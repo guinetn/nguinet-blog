@@ -77,7 +77,7 @@ export default function Post({ postData }) {
                 </a>
 
               <Keyword keywords={keywords}/>
-              
+                           
               <small className={`${style.postdate} ${utilStyles.lightText}`}>
               🕑 <DateMonthAgo dateString={date} />
               </small>

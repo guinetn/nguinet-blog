@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import style from './mybackpack.module.css'
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Keyboard, Parallax } from 'swiper';
+import { Navigation, Pagination, Keyboard } from 'swiper';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -17,20 +17,9 @@ export default function MyBackPack() {
 
         <p>This is the list of technologies I’ve been working with. I'm also a constant learner, open to learn more libraries, languages, etc!</p>
 
-        <div
-          slot="container-start"
-          className="parallax-bg"
-          style={{
-            "background-image":
-              "url(https://swiperjs.com/demos/images/nature-1.jpg)",
-          }}
-          data-swiper-parallax="-23%"
-        ></div>
-
         <Swiper
         spaceBetween={0}
         speed={600}
-        parallax={true}
         pagination={{
           clickable: true,
           type: "progressbar",
@@ -40,7 +29,7 @@ export default function MyBackPack() {
         }}
         grabCursor={true}
         navigation={true}
-        modules={[Keyboard, Parallax, Pagination, Navigation]}
+        modules={[Keyboard, Pagination, Navigation]}
         className="mySwiper">
           
         <SwiperSlide>

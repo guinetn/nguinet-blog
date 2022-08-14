@@ -14,10 +14,12 @@ export default function Postitem({ id, title, abstract, keywords, image, date })
           
           <a className={`glink ${style.posttitle}`}>
             <h3 >{title}</h3>
+            <div className={style.abstract}>{abstract.substring(0,60)}…</div>
           </a>
 
+
         <Keyword keywords={keywords}/>
-        
+
         <small className={`${style.postdate} ${utilStyles.lightText}`}>
         🕑 <DateMonthAgo dateString={date} />
         </small>
