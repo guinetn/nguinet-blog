@@ -47,6 +47,8 @@ export default function Home({ allPostsData }) {
           <h2 className={`${utilStyles.headingLg} colorGold`}>MY BLOG</h2>
           <input type="search" className={style.search} onChange={filteringPosts} placeholder={`search in ${allPostsData.length} posts`}/> 
         </div> 
+
+        <div className={style.blogsubtitle}>Sharing knowledge is valuable to all and it allows me to remember what's I have learned!</div>
         
         <div id='postsContainer' className={style.postsContainer}>
           {allPostsData.map(({ id, title, abstract, keywords, image, date }) => (

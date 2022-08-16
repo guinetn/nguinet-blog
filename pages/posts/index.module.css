@@ -17,4 +17,8 @@
     flex-wrap: wrap;
 }
 
-
+.blogsubtitle { 
+    margin: 0.5em 0 1em 0;
+    font-size: 0.9em;
+    text-align: center;
+}

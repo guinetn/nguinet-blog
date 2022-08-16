@@ -8,7 +8,6 @@ import DateMonthAgo from '../../components/date/date';
 import Keyword from '../../components/keyword/keyword';
 import { MathJax } from "better-react-mathjax";
 import { ConfigContext } from '../../components/global/configContext/configContext';
-import Script from 'next/script'
 
 // Dynamic routes: /posts/<id> 	id: name of the markdown file 
 // 1. A React component to render this page
@@ -71,7 +70,7 @@ export default function Post({ postData }) {
         <MathJax>
                     
           <div className={`${style.postItem} margintop35`}
-            style={{backgroundImage: `url(../${image})`}}>
+               style={{backgroundPosition: 'center center', backgroundImage: `url(../${image})`}}>
                 
                 <a className={`glink ${style.posttitle}`}>
                   <h3 >{title}</h3>
@@ -90,9 +89,11 @@ export default function Post({ postData }) {
               <cite>{abstract}</cite>
               <hr className="hr-fade"/>
             </div>
+
             <div ref={rootRef} 
                  className={style.remarkHighlight} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
           </div>
+
 
           <div className='flexcentercolunn'>
             <h3 className='bolder'> Share on </h3>
