@@ -298,4 +298,24 @@ I just copy the <iframe ... part and its done!
     document.write('<link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-549f23051d8d.css">')
     document.write('<div id=\"gist117835865\" class=\"gist\">\n    <div class=\"gist-file\" translate=\"no\">\n      <div class=\"gist-data\">\n        <div class=\"js-gist-file-update-container js-task-list-container file-box\">\n  <div id=\"file-ascombe-quartet-message-ipynb\" class=\"file my-2\">\n    \n    <div itemprop=\"text\" class=\"Box-body p-0 blob-wrapper data type-jupyter-notebook  \">\n\n          <div class=\"render-wrapper \">\n    <div class=\"render-container is-render-pending js-render-target \"\n      data-identity=\"95cefc59-0b61-47c1-9497-360cf8417555\"\n      data-host=\"https://notebooks.githubusercontent.com\"\n      data-type=\"ipynb\">\n      <svg style=\"box-sizing: content-box; color: var(--color-icon-primary);\" width=\"64\" height=\"64\" viewBox=\"0 0 16 16\" fill=\"none\" data-view-component=\"true\" class=\"octospinner mx-auto anim-rotate\">\n  <circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-opacity=\"0.25\" stroke-width=\"2\" vector-effect=\"non-scaling-stroke\" />\n  <path d=\"M15 8a7.002 7.002 0 00-7-7\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" vector-effect=\"non-scaling-stroke\" />\n<\/svg>\n      <div class=\"render-viewer-error\">Sorry, something went wrong. <a href=\"https://gist.github.com/guinetn/d4f108b822731a764e04bfb6bf818fcd.js\">Reload?<\/a><\/div>\n      <div class=\"render-viewer-fatal\">Sorry, we cannot display this file.<\/div>\n      <div class=\"render-viewer-invalid\">Sorry, this file is invalid so it cannot be displayed.<\/div>\n      <iframe\n        class=\"render-viewer \"\n        src=\"https://notebooks.githubusercontent.com/view/ipynb?azure_maps_enabled=true&amp;color_mode=light&amp;commit=ac585b7bea95e4c24ab702e01a4d8ca99e78896d&amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f676973742f6775696e65746e2f64346631303862383232373331613736346530346266623662663831386663642f7261772f616335383562376265613935653463323461623730326530316134643863613939653738383936642f6173636f6d62652d717561727465742d6d6573736167652e6970796e62&amp;logged_in=true&amp;nwo=guinetn%2Fd4f108b822731a764e04bfb6bf818fcd&amp;path=ascombe-quartet-message.ipynb&amp;repository_id=117835865&amp;repository_type=Gist#95cefc59-0b61-47c1-9497-360cf8417555\"\n        sandbox=\"allow-scripts allow-same-origin allow-top-navigation\"\n        title=\"File display\"\n        name=\"95cefc59-0b61-47c1-9497-360cf8417555\"\n      >\n          Viewer requires iframe.\n      <\/iframe>\n    <\/div>\n  <\/div>\n \n    <\/div>\n\n  <\/div>\n<\/div>\n\n      <\/div>\n      <div class=\"gist-meta\">\n        <a href=\"https://gist.github.com/guinetn/d4f108b822731a764e04bfb6bf818fcd/raw/ac585b7bea95e4c24ab702e01a4d8ca99e78896d/ascombe-quartet-message.ipynb\" style=\"float:right\">view raw<\/a>\n        <a href=\"https://gist.github.com/guinetn/d4f108b822731a764e04bfb6bf818fcd#file-ascombe-quartet-message-ipynb\">\n          ascombe-quartet-message.ipynb\n        <\/a>\n        hosted with &#10084; by <a href=\"https://github.com\">GitHub<\/a>\n      <\/div>\n    <\/div>\n<\/div>\n')
 
+Add some meta-data + style
 
+<div class="gist-meta">
+        <a target="_blank" href="https://gist.github.com/guinetn/d4f108b822731a764e04bfb6bf818fcd#file-ascombe-quartet-message-ipynb">anscombe-quartet-python.ipynb</a>
+        <div style='gist-raw'><a target="_blank" href="https://gist.githubusercontent.com/guinetn/d4f108b822731a764e04bfb6bf818fcd/raw/ac585b7bea95e4c24ab702e01a4d8ca99e78896d/ascombe-quartet-message.ipynb">view raw</a></div>
+        <div>hosted with ❤ by <a href="https://github.com">GitHub</a></div>
+</div>
+
+.render-viewer {
+  width: 80vw !important;
+  height: 550px !important;
+  padding: 0.5em;
+}
+.gist-meta {
+  width: 80vw;
+  display:flex;
+  justify-content: space-between; 
+ 
+  font: bold;
+  color: grey;
+}

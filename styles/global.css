@@ -166,7 +166,13 @@ img {
   height: 550px !important;
   padding: 0.5em;
 }
-
+.gist-meta {
+  width: 80vw;
+  display:flex;
+  justify-content: space-between; 
+  font-size: medium;
+  color: grey;
+}
 
 /* PROFILE */
 
