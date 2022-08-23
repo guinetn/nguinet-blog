@@ -1,0 +1,12 @@
+
+
+.b64Canvas:hover {
+	height:150px;
+}
+
+.b64Canvas { 
+	width:200px;
+	height:90px;
+	border: 1px dotted white; 
+	margin: 0.5em 0.2em;   
+}

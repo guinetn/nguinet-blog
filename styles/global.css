@@ -1,5 +1,6 @@
 ﻿/* @font-face{ src: url("https://fonts.googleapis.com/css?family=Montserrat"); font-family: 'Montserrat'; } */
 @font-face{src: url("https://fonts.googleapis.com/css?family=Open+Sans"); font-family: 'Open+Sans';}
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
 html,
 body {
@@ -36,7 +37,6 @@ a:hover {
 
 img {
   max-width: 100%;
-  display: block;
 }
 
 .overflowhidden {
@@ -44,6 +44,11 @@ img {
 }
 
 /* LAYOUTS */
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
 
 .flexcenter {
   display: flex;
@@ -98,6 +103,12 @@ img {
   position: relative;
 }
 
+/* PADDING SECTION */ 
+
+.padding02em {
+  padding: 0.2em;
+}
+
 /* MARGIN SECTION */ 
 
 .margintop35 {
@@ -108,7 +119,14 @@ img {
   margin-left: 1em;
 }
 
+.marginleft15vw {
+  margin-left: 15vw !important;
+}
 
+
+.marginH1 {
+  margin: 0.2em auto;
+}
 
 
 /* WIDTHS */
@@ -126,12 +144,32 @@ img {
 }
 
 
+/* BOX */
+
+.box3d {
+  min-width: 200px;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgb(0 0 0), 4px 0px 12px rgb(223 214 214), 0 4px 4px rgb(0 0 0 / 11%), 0 6px 8px rgb(0 0 0 / 11%), 0 8px 16px rgb(0 0 0 / 11%);
+  page-break-inside: avoid;
+  break-inside: avoid;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.box3d > h4 {
+  margin: 0 0 1em 0;
+}
 
 
 /* LINKS */
 
 .glink { 
   display: block;
+  color:#91ddef;
 }
 
 .glinkwhite { 
@@ -227,6 +265,16 @@ img {
 
 /* BUTTONS  */
 
+.bt-toolbox {
+  width: 250px;
+  height: 2em;
+  margin: 5px 10px;
+  background-color: rgb(31, 146, 192);
+  border-radius: 4px;
+font-size: large; 
+color:white;
+}
+
 .blue-button {
   display: inline-block;
   background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
@@ -304,6 +352,9 @@ img {
   font-weight: bolder;
 }
 
+.largetext {
+	font-size: large; 
+}
 
 /* ANIMATIONS */
 

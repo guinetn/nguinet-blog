@@ -6,7 +6,11 @@ function Navlinks(props) {
     return (
         <div className={style.NavLinkHolder}>
 
-             <Link href='/posts'> 
+            <Link href='/'> 
+              <a className={style.link}>home</a> 
+            </Link>
+            
+            <Link href='/posts'> 
               <a className={style.link}>posts</a> 
             </Link>
             
@@ -14,15 +18,20 @@ function Navlinks(props) {
               <a className={style.link}>projects</a> 
             </Link>  
 
-            <Link href='/wall'> 
-              <a className={style.link}>wall</a> 
+            <Link href='/courses'> 
+              <a className={style.link}>courses</a> 
             </Link> 
 
             <Link href='/me/about'> 
-              <a className={style.link}>about me</a> 
+              <a className={style.link}>about</a> 
+            </Link>
+            
+            <Link href='/tools'> 
+              <a className={style.link} title='tools'>🔨</a> 
             </Link>
 
-              <Link href="https://github.com/guinetn">
+
+            <Link href="https://github.com/guinetn">
 
               <a className={style.social}>
                 <svg className={style.socialicon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
