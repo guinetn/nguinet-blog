@@ -12,6 +12,8 @@ export default function Project({ projectData }) {
           <title>{projectData.title}</title>
         </Head>
         <br />
+        <h2>{projectData.title}</h2>
+        <br />
         {projectData.id} 
         <br />
          <Date dateString={projectData.date} /> 

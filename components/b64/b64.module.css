@@ -7,6 +7,6 @@
 .b64Canvas { 
 	width:200px;
 	height:90px;
-	border: 1px dotted white; 
+	border: 1px dashed #47a0f3; 
 	margin: 0.5em 0.2em;   
 }

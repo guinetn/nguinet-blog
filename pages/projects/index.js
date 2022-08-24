@@ -28,7 +28,9 @@ export default function Home({ allProjectssData }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>PROJECTS</h2>
         
-        <ul className={utilStyles.list}>
+        🚧 IN PROGRESS... 
+
+        {/* <ul className={utilStyles.list}>
           {allProjectssData.map(({ id, title, date }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/projects/${id}`}>
@@ -40,7 +42,7 @@ export default function Home({ allProjectssData }) {
               </small>
             </li>
           ))}
-        </ul>
+        </ul> */}
 
       </section>
     </Layout>

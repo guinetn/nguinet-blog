@@ -1,4 +1,4 @@
-export function sendmail() {
+export default function sendmail() {
 
     const $ = document.getElementById.bind(document);
     const bodyContent =  {

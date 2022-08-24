@@ -1,5 +1,5 @@
 ---
-title: 'My projects at Suez'
+title: 'My NEXT COURSES at Suez'
 date: '2020-01-02'
 ---
 

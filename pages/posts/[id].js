@@ -14,8 +14,8 @@ import { ConfigContext } from '../../components/global/configContext/configConte
 export default function Post({ postData }) {
 
   const { id, contentHtml, title, abstract, keywords, image, date} = {...postData};
-  const [ currentURL, setCurrentURL] = useState("");
-  const [ pathTitle, setPathTitle] = useState("");
+  const [ currentURL, setCurrentURL] = useState(""); // For sharing (tweeter..)
+  const [ pathTitle, setPathTitle] = useState("");   // For sharing (tweeter..)
 
   const rootRef = useRef(null);
   
@@ -24,7 +24,6 @@ export default function Post({ postData }) {
     setPathTitle( document.title); 
 
     const allPres = rootRef.current.querySelectorAll("pre");
-    let a = 13/0;
     for (const pre of allPres) {
       const code = pre.firstElementChild;
       if (!code || !/code/i.test(code.tagName)) {

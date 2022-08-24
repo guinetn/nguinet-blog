@@ -1,19 +1,14 @@
-﻿import {sendmail} from './sendmail.js'
+﻿import sendmail from './sendmail.js'
 import style from './contact.module.css';
 
 export default function Contact() {
-
-  const send_mail = (e) => {
-    console.log(e);
-    sendmail();
-  }
 
   return (
     <>
       <section className='margintop35'> 
 
       <div id='getintouch' className='flexleft'>
-          <div className={`${style.circle256}`}>
+          <div className={`${style.getintouch}`}>
             <h2 className='marginleft1em'> 📐 Have a project in mind?</h2>
           </div>
       </div>
@@ -43,7 +38,7 @@ export default function Contact() {
         </div>
 
           <div>
-            <button id="send" type="button" className='blue-button' onClick={send_mail}>SEND</button>
+            <button id="send" type="button" className='blue-button' onClick={sendmail}>SEND</button>
             <div id="sent_confirmation" className={style.send_successful_message}>👍 MESSAGE SENT! THANK YOU.</div>
             <div id="sent_failed" className={style.send_failed_message}>👎 ERROR: MESSAGE NOT SENT</div>
           </div>

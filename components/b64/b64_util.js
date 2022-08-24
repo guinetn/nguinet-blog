@@ -1,6 +1,4 @@
-
-
-export function b64Encode() {
+export default function b64Encode() {
   const b64PlainText = document.querySelector("#b64PlainText").value;
   document.querySelector("#b64EncodedText").value = btoa(b64PlainText);
 }
@@ -10,23 +8,21 @@ export function b64Decode() {
   document.querySelector("#b64PlainText").value = atob(b64EncodedText);
 }
 
-export function dragOver(e) {
- // alert("dragover " + e);
- console.log("dragover " + e);
- event.preventDefault();
+export function dragOver(event) {
+ event.preventDefault();   // Needed to allow onDrop()
 }
 
 // /* Drag-Drop image */
 
 function imageError(img) {
-  img.src =
-    "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+  img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
 }
 
 export function onImageDrop(e) {
   e.preventDefault();
   const canvas = document.querySelector("#dropableCanvas");
   const context = canvas.getContext("2d");
+  const b64EncodedText = document.querySelector("#b64EncodedText");
 
   let imageFile = null;
   if (e.dataTransfer.files.length > 0) {
@@ -42,7 +38,7 @@ export function onImageDrop(e) {
         image.crossOrigin = "Anonymous";
         image.src = imageFile;
         
-        document.querySelector("#b64EncodedText").value = canvas.toDataURL();
+       b64EncodedText.value = canvas.toDataURL();
       });
     return;
   }
@@ -60,5 +56,5 @@ export function onImageDrop(e) {
     }
   };
   imageReader.readAsDataURL(imageFile);
-  b64EncodedText.value = canvas.toDataURL();
-};
+ b64EncodedText.value = canvas.toDataURL();
+}

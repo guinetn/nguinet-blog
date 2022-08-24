@@ -1,4 +1,4 @@
-export function getCurrentTimestamp() {
+export default function getCurrentTimestamp() {
     document.querySelector("#currentTimestamp").value = Math.floor(new Date().getTime()/1000.0);
 }
 
@@ -15,5 +15,3 @@ export function tools_init() {
     document.querySelector("#timestampToDecode").value = Math.floor( new Date().getTime() / 1000.0 );
     document.querySelector("#timestampToEncode").value = new Date().toISOString(); 
 }
-
-

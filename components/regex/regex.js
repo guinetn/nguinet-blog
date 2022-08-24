@@ -1,4 +1,5 @@
-﻿import {processRegex} from './regex_core.js'
+﻿import React, { useEffect, useState, useRef } from "react";
+import processRegex from './regex_util.js'
 import style from './regex.module.css';
 
 export default function Regex() {
@@ -9,7 +10,7 @@ export default function Regex() {
 
             <div className="box3d">
               <h4>⭐Regex</h4>
-              <div className="flexleftcolunn">
+              <div className="flexleftcolunn swiper-no-swiping">
                 <small>Pattern <input type="checkbox" className={style.regexPattern} title="ignore case" />i
                   <input type="checkbox" defaultChecked className={style.regexPattern} title="global" />g
                   <input type="checkbox" className={style.regexPattern} title="multiline" />m

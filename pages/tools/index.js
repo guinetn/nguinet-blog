@@ -6,17 +6,16 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import Timestamp from './tools/timestamp/timestamp';
-import Regex from './tools/regex/regex';
-import B64 from './tools/b64/b64';
+
+import Timestamp from '../../components/timestamp/timestamp';
+import Regex from '../../components/regex/regex';
+import B64 from '../../components/b64/b64';
 
 import utilStyles from '../../styles/utils.module.css';
-import * as style from './index.module.css';
 import Links_Tile from '../../components/links_tile/links_tile';
 
 export default function Tools() {
 
-  
   const toolbox_online_tools = [
     "ONLINE TOOLS",
     "https://docs.w3cub.com",
@@ -37,10 +36,10 @@ export default function Tools() {
 
       <h2 className={`${utilStyles.headingLg} colorGold`}>Toolbox</h2>
 
-
       <Swiper
         spaceBetween={0}
         speed={600}
+        noSwiping={true}
         pagination={{
           clickable: true,
           type: "progressbar",
@@ -62,11 +61,11 @@ export default function Tools() {
         </SwiperSlide>
 
         <SwiperSlide>
-          <Regex/>
+          <B64/>
         </SwiperSlide>
 
         <SwiperSlide>
-          <B64/>
+          <Regex/>
         </SwiperSlide>
     
       </Swiper>

@@ -12,25 +12,26 @@
    });
  }
 
-export function processRegex(e) {
-   try {
-
+export default function processRegex(e) {
+  
+  try {
     let regexPattern = document.getElementById("regexPattern");
     let regexInput = document.getElementById("regexInput");
     let regexOutput = document.getElementById("regexOutput");
 
-     let flags = "";
-     [...document.querySelectorAll("[type='checkbox']")].map((r) => {
-       if (r.checked) flags += r.nextSibling.nodeValue[0];
-     });
-     const regex = new RegExp(regexPattern.value, flags);
-     let matches = regexMatch(regexInput.value, regex);
-     regexOutput.value =
-       `Flags: ${flags}\r\n` +
-       JSON.stringify(matches)
-         .replace(/(?<sep>["}],)/g, "$1\r\n")
-         .replace(/]},/g, "]},\r\n");
-   } catch (e) {
-     regexOutput.value = `Error Regex ${e}`;
-   }
+    let flags = "";
+    [...document.querySelectorAll("[type='checkbox']")].map((r) => {
+      if (r.checked) flags += r.nextSibling.nodeValue[0];
+    });
+    const regex = new RegExp(regexPattern.value, flags);
+    let matches = regexMatch(regexInput.value, regex);
+    regexOutput.value =
+      `Flags: ${flags}\r\n` +
+      JSON.stringify(matches)
+        .replace(/(?<sep>["}],)/g, "$1\r\n")
+        .replace(/]},/g, "]},\r\n");
+    } catch (e) {
+      regexOutput.value = `Error Regex ${e}`;
+  }
+  
  }

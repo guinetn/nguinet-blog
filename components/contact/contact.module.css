@@ -92,31 +92,51 @@
   https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown
   */
 
-  .circle256 {
+  .getintouch {
 	border-radius: 16px;
 	background-color: #1e1e1e;
 	width: 30vw;
   }
 
-  .circle256 {
+  .getintouch {
 	border-radius: 16px;
 	background-color: #1e1e1e;
   }
 
   @media (max-width:1400px) {
-	  .circle256 {
+	  .getintouch {
 		width: 40vw;
+	  }
+	  .form {
+		width: 50vw;
 	  }
   }
 
   @media (max-width:1200px) {
-	.circle256 {
-	  width: 60vw;
+	.getintouch {
+	  width: 40vw;
 	}
+	.form {
+		width:60vw;
+	  }
 }
 
-@media (max-width:1000px) {
-	.circle256 {
+  @media (max-width:960px) {
+	.getintouch {
+	  width: 60vw;
+	}
+	.form {
+		width:70vw;
+	  }
+}
+
+
+
+@media (max-width:800px) {
+	.getintouch {
 	  width: 90vw;
 	}
+	.form {
+		width: 90vw;
+	  }
 }
